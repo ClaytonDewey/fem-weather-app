@@ -20,8 +20,20 @@
   --blue-700: hsl(248, 70%, 36%);
 
   // Typography
-  --fs-reg: #{rem(18)};
+  --fs-xxs: #{rem(14)};
+  --fs-xs: #{rem(16)};
+  --fs-med: #{rem(18)};
+  --fs-lg: #{rem(20)};
+  --fs-xlg: #{rem(28)};
+  --fs-2xlg: #{rem(32)};
+  --fs-3xlg: #{rem(52)};
+  --fs-4xlg: #{rem(96)};
 
   --ff-primary: 'DM Sans', sans-serif;
   --ff-secondary: 'Bricolage Grotesque', sans-serif;
+
+  --fw-light: 300;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
 }
