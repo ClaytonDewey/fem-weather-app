@@ -13,9 +13,9 @@ html {
 }
 
 body {
-  // font-family: var(--ff-sans);
+  font-family: var(--ff-primary);
   font-weight: 500;
-  // font-size: var(--fs-med);
+  font-size: var(--fs-reg);
   line-height: 1.6;
   position: relative;
 
@@ -29,16 +29,16 @@ body {
   margin: 0px auto;
   width: 100%;
   box-sizing: border-box;
-  // background: var(--clr-white);
-  // color: var(--clr-black);
+  background: var(--neutral-900);
+  color: var(--neutral-0);
 }
 
-.visually-hidden {
+.sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  height: 1px;
+  height: rem(1);
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
+  width: rem(1);
 }

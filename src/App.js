@@ -1,16 +1,19 @@
+import { Footer, Header } from './components';
+
 function App() {
   // https://open-meteo.com/
   return (
-    <div className='App'>
-      Units
-      <br />
-      Switch to Imperial/Metric
-      <br />
-      Temperature
-      <br />
-      Celsius (°C)
-      <br />
-      Fahrenheit (°F)
+    <div className='app'>
+      <Header />
+      <div className='card'>
+        Switch to Imperial/Metric
+        <br />
+        Temperature
+        <br />
+        Celsius (°C)
+        <br />
+        Fahrenheit (°F)
+      </div>
       <br />
       Wind Speed
       <br />
@@ -48,20 +51,7 @@ function App() {
       Hourly forecast
       <br />
       {/* <!-- Insert hourly forecast for the selected day here --> */}
-      <footer class='attribution'>
-        Challenge by{' '}
-        <a
-          href='https://www.frontendmentor.io?ref=challenge'
-          target='_blank'
-          rel='noreferrer'>
-          Frontend Mentor
-        </a>
-        . Coded by{' '}
-        <a href='https://www.claytondewey.com' target='_blank' rel='noreferrer'>
-          Clayton Dewey
-        </a>
-        .
-      </footer>
+      <Footer />
     </div>
   );
 }

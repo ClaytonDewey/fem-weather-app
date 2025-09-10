@@ -1,0 +1,37 @@
+@use '../util' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem(16);
+  // padding: rem(16);
+
+  &__logo {
+    img {
+      width: rem(138);
+      display: block;
+      height: auto;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    gap: rem(6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--neutral-800);
+    color: var(--neutral-0);
+    border: none;
+    border-radius: rem(6);
+    width: rem(89);
+    height: rem(33);
+    font-size: rem(14);
+
+    img {
+      height: rem(14);
+      width: rem(14);
+    }
+  }
+}

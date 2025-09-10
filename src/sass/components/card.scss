@@ -1,0 +1,7 @@
+@use '../util' as *;
+
+.card {
+  background-color: var(--neutral-800);
+  border-radius: rem(6);
+  padding: rem(16);
+}

@@ -1,3 +1,5 @@
+@use './util' as *;
+
 // Abstracts/Variables
 @use 'abstracts';
 
@@ -12,3 +14,7 @@
 
 // Pages
 // @use 'pages';
+
+.app {
+  padding: rem(16);
+}
