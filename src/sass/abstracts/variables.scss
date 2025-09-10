@@ -20,14 +20,14 @@
   --blue-700: hsl(248, 70%, 36%);
 
   // Typography
-  --fs-xxs: #{rem(14)};
-  --fs-xs: #{rem(16)};
-  --fs-med: #{rem(18)};
-  --fs-lg: #{rem(20)};
-  --fs-xlg: #{rem(28)};
-  --fs-2xlg: #{rem(32)};
-  --fs-3xlg: #{rem(52)};
   --fs-4xlg: #{rem(96)};
+  --fs-3xlg: #{rem(52)};
+  --fs-2xlg: #{rem(32)};
+  --fs-xlg: #{rem(28)};
+  --fs-lg: #{rem(20)};
+  --fs-med: #{rem(18)};
+  --fs-sm: #{rem(16)};
+  --fs-xs: #{rem(14)};
 
   --ff-primary: 'DM Sans', sans-serif;
   --ff-secondary: 'Bricolage Grotesque', sans-serif;
@@ -36,4 +36,23 @@
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
+
+  --text-preset-1: italic normal var(--fw-semibold) var(--fs-4xlg) / 100%
+    var(--ff-primary);
+  --text-preset-2: normal normal var(--fw-bold) var(--fs-3xlg) / 120%
+    var(--ff-secondary);
+  --text-preset-3: normal normal var(--fw-light) var(--fs-2xlg) / 100%
+    var(--ff-primary);
+  --text-preset-4: normal normal var(--fw-bold) var(--fs-xlg) / 120%
+    var(--ff-primary);
+  --text-preset-5: normal normal var(--fw-semibold) var(--fs-lg) / 120%
+    var(--ff-primary);
+  --text-preset-5-md: normal normal var(--fw-medium) var(--fs-lg) / 120%
+    var(--ff-primary);
+  --text-preset-6: normal normal var(--fw-medium) var(--fs-med) / 120%
+    var(--ff-primary);
+  --text-preset-7: normal normal var(--fw-medium) var(--fs-sm) / 120%
+    var(--ff-primary);
+  --text-preset-8: normal normal var(--fw-medium) var(--fs-xs) / 120%
+    var(--ff-primary);
 }

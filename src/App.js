@@ -1,40 +1,20 @@
-import { useState } from 'react';
-import { Footer, Header, Input } from './components';
-import iconSearch from './icons/icon-search.svg';
-import { Button } from './components/Button';
+import { Footer, Header, SearchBox } from './components';
 
 // https://open-meteo.com/
 function App() {
-  const [location, setLocation] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(`Searching for: ${location}`);
-  };
-
   return (
     <div className='app'>
       <Header />
-      <form onSubmit={handleSubmit}>
-        <Input
-          icon={iconSearch}
-          type='search'
-          placeholder='Search for a place...'
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-        />
-        <Button type='search' className='btn'>
-          Search
-        </Button>
-      </form>
-      <div className='card'>
-        Switch to Imperial/Metric
-        <br />
-        Temperature
-        <br />
-        Celsius (°C)
-        <br />
-        Fahrenheit (°F)
+      <SearchBox />
+      <div className='card card__main'>
+        <div className='card__main-header'>
+          <h2>Berlin, Germany</h2>
+          <p>Tuesday, Aug 5, 2025</p>
+        </div>
+        <div className='card__main-body'>
+          <img src='/images/icon-sunny.webp' alt='Sunny' className='icon' />
+          <span className='temp'>20&deg;</span>
+        </div>
       </div>
       <br />
       Wind Speed

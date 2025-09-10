@@ -1,0 +1,10 @@
+@use '../util' as *;
+
+.searchbox {
+  margin-bottom: rem(48);
+  h1 {
+    font: var(--text-preset-2);
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
