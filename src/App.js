@@ -1,10 +1,32 @@
-import { Footer, Header } from './components';
+import { useState } from 'react';
+import { Footer, Header, Input } from './components';
+import iconSearch from './icons/icon-search.svg';
+import { Button } from './components/Button';
 
+// https://open-meteo.com/
 function App() {
-  // https://open-meteo.com/
+  const [location, setLocation] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(`Searching for: ${location}`);
+  };
+
   return (
     <div className='app'>
       <Header />
+      <form onSubmit={handleSubmit}>
+        <Input
+          icon={iconSearch}
+          type='search'
+          placeholder='Search for a place...'
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+        />
+        <Button type='search' className='btn'>
+          Search
+        </Button>
+      </form>
       <div className='card'>
         Switch to Imperial/Metric
         <br />

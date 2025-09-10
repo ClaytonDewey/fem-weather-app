@@ -1,3 +1,4 @@
-export { default as Card } from './Card';
-export { default as Footer } from './Footer';
-export { default as Header } from './Header';
+export { Card } from './Card';
+export { Footer } from './Footer';
+export { Header } from './Header';
+export { Input } from './Input';

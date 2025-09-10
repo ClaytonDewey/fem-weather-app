@@ -1,4 +1,4 @@
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className='attribution'>
       Challenge by{' '}
@@ -16,4 +16,3 @@ const Footer = () => {
     </footer>
   );
 };
-export default Footer;
