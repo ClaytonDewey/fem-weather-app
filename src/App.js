@@ -119,6 +119,104 @@ function App() {
             <img src={iconDropdown} alt='' />
           </Button>
         </div>
+
+        <div className='block__body'>
+          <Card>
+            <div className='info'>
+              <img
+                src='/images/icon-overcast.webp'
+                alt='overcast'
+                className='icon'
+              />
+              <span>3 pm</span>
+            </div>
+            <div className='temp'>20&deg;</div>
+          </Card>
+
+          <Card>
+            <div className='info'>
+              <img
+                src='/images/icon-partly-cloudy.webp'
+                alt='overcast'
+                className='icon'
+              />
+              <span>4 pm</span>
+            </div>
+            <div className='temp'>20&deg;</div>
+          </Card>
+
+          <Card>
+            <div className='info'>
+              <img
+                src='/images/icon-sunny.webp'
+                alt='overcast'
+                className='icon'
+              />
+              <span>5 pm</span>
+            </div>
+            <div className='temp'>20&deg;</div>
+          </Card>
+
+          <Card>
+            <div className='info'>
+              <img
+                src='/images/icon-overcast.webp'
+                alt='overcast'
+                className='icon'
+              />
+              <span>6 pm</span>
+            </div>
+            <div className='temp'>19&deg;</div>
+          </Card>
+
+          <Card>
+            <div className='info'>
+              <img
+                src='/images/icon-snow.webp'
+                alt='overcast'
+                className='icon'
+              />
+              <span>7 pm</span>
+            </div>
+            <div className='temp'>18&deg;</div>
+          </Card>
+
+          <Card>
+            <div className='info'>
+              <img
+                src='/images/icon-fog.webp'
+                alt='overcast'
+                className='icon'
+              />
+              <span>8 pm</span>
+            </div>
+            <div className='temp'>18&deg;</div>
+          </Card>
+
+          <Card>
+            <div className='info'>
+              <img
+                src='/images/icon-snow.webp'
+                alt='overcast'
+                className='icon'
+              />
+              <span>9 pm</span>
+            </div>
+            <div className='temp'>17&deg;</div>
+          </Card>
+
+          <Card>
+            <div className='info'>
+              <img
+                src='/images/icon-overcast.webp'
+                alt='overcast'
+                className='icon'
+              />
+              <span>10 pm</span>
+            </div>
+            <div className='temp'>17&deg;</div>
+          </Card>
+        </div>
       </div>
       <Footer />
     </>
