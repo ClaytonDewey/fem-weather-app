@@ -15,9 +15,8 @@ html {
 body {
   font-family: var(--ff-primary);
   font-weight: 500;
-  font-size: var(--fs-reg);
-  line-height: 1.6;
   position: relative;
+  padding: rem(16);
 
   @include breakpoint(medium) {
     // font-size: var(--fs-reg);
@@ -31,6 +30,12 @@ body {
   box-sizing: border-box;
   background: var(--neutral-900);
   color: var(--neutral-0);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .sr-only {

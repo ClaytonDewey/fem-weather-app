@@ -10,11 +10,7 @@
 @use 'components';
 
 // Layout
-// @use 'layout';
+@use 'layout';
 
 // Pages
 // @use 'pages';
-
-.app {
-  padding: rem(16);
-}

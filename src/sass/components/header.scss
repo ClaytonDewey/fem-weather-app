@@ -14,24 +14,4 @@
       height: auto;
     }
   }
-
-  button {
-    cursor: pointer;
-    gap: rem(6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--neutral-800);
-    color: var(--neutral-0);
-    border: none;
-    border-radius: rem(6);
-    width: rem(89);
-    height: rem(33);
-    font-size: rem(14);
-
-    img {
-      height: rem(14);
-      width: rem(14);
-    }
-  }
 }

@@ -11,7 +11,7 @@ export const Header = () => {
       </div>
       {/* TODO: make units dropdown component */}
       <div className='header__units'>
-        <button type='button'>
+        <button type='button' className='btn-toggle'>
           <img src={iconUnits} alt='' /> Units <img src={iconDropdown} alt='' />
         </button>
       </div>

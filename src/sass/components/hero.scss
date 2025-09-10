@@ -1,0 +1,51 @@
+@use '../util' as *;
+
+.hero {
+  border-radius: rem(20);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url('../../../public/images/bg-today-small.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: rem(40) 0;
+  margin-bottom: rem(20);
+
+  &__header {
+    width: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    font: var(--text-preset-4);
+    margin: 0;
+    padding: 0;
+    margin-bottom: rem(12);
+  }
+
+  p {
+    color: var(--neutral-200);
+    font: var(--text-preset-6);
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .icon {
+      display: block;
+      width: rem(120);
+      height: auto;
+    }
+
+    .temp {
+      font: var(--text-preset-1);
+      letter-spacing: rem(-2);
+      margin-right: rem(24);
+    }
+  }
+}
