@@ -1,7 +1,7 @@
 @use '../util' as *;
 
 .searchbox {
-  margin-bottom: rem(48);
+  margin-bottom: var(--sp-48);
   h1 {
     font: var(--text-preset-2);
     letter-spacing: 0;

@@ -4,20 +4,20 @@
   // Colors
   // Neutral
 
-  --neutral-900: hsl(243, 96%, 9%);
-  --neutral-800: hsl(243, 27%, 20%);
-  --neutral-700: hsl(243, 23%, 24%);
-  --neutral-600: hsl(243, 23%, 30%);
-  --neutral-300: hsl(240, 6%, 70%);
-  --neutral-200: hsl(250, 6%, 84%);
-  --neutral-0: hsl(0, 0%, 100%);
+  --neutral-900: #02012c;
+  --neutral-800: #262540;
+  --neutral-700: #302f4a;
+  --neutral-600: #3c3b5e;
+  --neutral-300: #acacb7;
+  --neutral-200: #d4d3d9;
+  --neutral-0: #ffffff;
 
   // Orange
-  --orange-500: hsl(28, 100%, 52%);
+  --orange-500: #ff820a;
 
   // Blue
-  --blue-500: hsl(233, 67%, 56%);
-  --blue-700: hsl(248, 70%, 36%);
+  --blue-500: #4658d9;
+  --blue-700: #2b1b9c;
 
   // Typography
   --fs-4xlg: #{rem(96)};
@@ -55,4 +55,35 @@
     var(--ff-primary);
   --text-preset-8: normal normal var(--fw-medium) var(--fs-xs) / 120%
     var(--ff-primary);
+
+  // Radii
+  --radius-4: #{rem(4)};
+  --radius-6: #{rem(6)};
+  --radius-8: #{rem(8)};
+  --radius-10: #{rem(10)};
+  --radius-12: #{rem(12)};
+  --radius-16: #{rem(16)};
+  --radius-20: #{rem(20)};
+  --radius-24: #{rem(24)};
+  --radius-full: #{rem(999)};
+
+  // Spacing
+  --sp-2: #{rem(2)};
+  --sp-4: #{rem(4)};
+  --sp-6: #{rem(6)};
+  --sp-8: #{rem(8)};
+  --sp-10: #{rem(10)};
+  --sp-12: #{rem(12)};
+  --sp-16: #{rem(16)};
+  --sp-20: #{rem(20)};
+  --sp-24: #{rem(24)};
+  --sp-32: #{rem(32)};
+  --sp-40: #{rem(40)};
+  --sp-48: #{rem(48)};
+  --sp-64: #{rem(64)};
+  --sp-80: #{rem(80)};
+  --sp-96: #{rem(96)};
+  --sp-112: #{rem(112)};
+  --sp-128: #{rem(128)};
+  --sp-140: #{rem(140)};
 }

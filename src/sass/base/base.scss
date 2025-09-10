@@ -16,7 +16,7 @@ body {
   font-family: var(--ff-primary);
   font-weight: 500;
   position: relative;
-  padding: rem(16);
+  padding: var(--sp-16);
 
   @include breakpoint(medium) {
     // font-size: var(--fs-reg);

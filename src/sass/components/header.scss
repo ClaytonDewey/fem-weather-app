@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: rem(16);
-  // padding: rem(16);
+  margin-bottom: var(--sp-16);
+  // padding: var(--sp-16);
 
   &__logo {
     img {

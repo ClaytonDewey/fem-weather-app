@@ -7,7 +7,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: rem(24);
+    left: var(--sp-24);
   }
 
   input {
@@ -20,8 +20,8 @@
     color: var(--neutral-200);
     font: var(--text-preset-5-md);
     border: none;
-    border-radius: rem(12);
-    margin-bottom: rem(12);
+    border-radius: var(--sp-12);
+    margin-bottom: var(--sp-12);
 
     &::placeholder {
       color: currentColor;

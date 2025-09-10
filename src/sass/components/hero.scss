@@ -1,7 +1,7 @@
 @use '../util' as *;
 
 .hero {
-  border-radius: rem(20);
+  border-radius: var(--sp-20);
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -10,8 +10,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  padding: rem(40) 0;
-  margin-bottom: rem(20);
+  padding: var(--sp-40) 0;
+  margin-bottom: var(--sp-20);
 
   &__header {
     width: 100%;
@@ -22,7 +22,7 @@
     font: var(--text-preset-4);
     margin: 0;
     padding: 0;
-    margin-bottom: rem(12);
+    margin-bottom: var(--sp-12);
   }
 
   p {
@@ -45,7 +45,7 @@
     .temp {
       font: var(--text-preset-1);
       letter-spacing: rem(-2);
-      margin-right: rem(24);
+      margin-right: var(--sp-24);
     }
   }
 }

@@ -3,6 +3,6 @@
 .card {
   background-color: var(--neutral-800);
   color: var(--neutral-0);
-  border-radius: rem(20);
-  padding: rem(20);
+  border-radius: var(--sp-12);
+  padding: var(--sp-20);
 }
