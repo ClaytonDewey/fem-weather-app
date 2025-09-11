@@ -16,6 +16,10 @@
     }
   }
 
+  &__units {
+    position: relative;
+  }
+
   @include breakpoint(medium) {
     &__logo {
       img {

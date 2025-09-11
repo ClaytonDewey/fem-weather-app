@@ -5,3 +5,5 @@ export { Header } from './Header';
 export { Hero } from './Hero';
 export { Input } from './Input';
 export { SearchBox } from './SearchBox';
+export { Unit } from './Unit';
+export { UnitList } from './UnitList';

@@ -1,0 +1,37 @@
+@use '../util' as *;
+
+.modal {
+  &__units {
+    z-index: 9999;
+    position: absolute;
+    right: 0;
+    top: rem(43);
+    padding: var(--sp-6) var(--sp-8);
+    background-color: var(--neutral-800);
+    border: 1px solid var(--neutral-600);
+    border-radius: var(--radius-12);
+    width: rem(214);
+    height: rem(412);
+  }
+
+  @include breakpoint(medium) {
+    top: rem(53);
+  }
+}
+
+.unit {
+  h3 {
+    font: var(--text-preset-8);
+    color: var(--neutral-300);
+    margin: 0 0 var(--sp-8) var(--sp-8);
+  }
+
+  & > button {
+    margin-bottom: var(--sp-4);
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--neutral-600);
+    margin-bottom: var(--sp-10);
+  }
+}

@@ -1,6 +1,7 @@
 import logo from '../icons/logo.svg';
 import iconUnits from '../icons/icon-units.svg';
 import iconDropdown from '../icons/icon-dropdown.svg';
+import { UnitList } from '.';
 
 export const Header = () => {
   return (
@@ -14,6 +15,7 @@ export const Header = () => {
         <button type='button' className='btn-toggle'>
           <img src={iconUnits} alt='' /> Units <img src={iconDropdown} alt='' />
         </button>
+        <UnitList />
       </div>
     </header>
   );

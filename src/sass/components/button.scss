@@ -44,4 +44,25 @@
       }
     }
   }
+
+  &-unit {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: var(--neutral-0);
+    font: var(--text-preset-7);
+    padding-inline: var(--sp-8);
+    border: none;
+    border-radius: var(--radius-8);
+    height: rem(39);
+    width: 100%;
+    transition: all 0.25s ease-in-out;
+
+    &.active,
+    &:hover {
+      background-color: var(--neutral-700);
+    }
+  }
 }
