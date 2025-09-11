@@ -12,7 +12,6 @@
   height: rem(56);
   border: none;
   border-radius: var(--sp-12);
-  margin-bottom: var(--sp-32);
 
   &-toggle {
     cursor: pointer;
@@ -26,11 +25,23 @@
     border-radius: var(--sp-6);
     width: rem(89);
     height: rem(33);
-    font-size: rem(14);
+    font: var(--text-preset-8);
 
     img {
-      height: rem(14);
-      width: rem(14);
+      height: var(--sp-14);
+      width: var(--sp-14);
+    }
+
+    @include breakpoint(medium) {
+      height: rem(43);
+      width: rem(119);
+      gap: var(--sp-10);
+      font: var(--text-preset-7);
+
+      img {
+        height: var(--sp-16);
+        width: var(--sp-16);
+      }
     }
   }
 }

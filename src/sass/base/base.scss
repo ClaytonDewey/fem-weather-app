@@ -13,13 +13,15 @@ html {
 }
 
 body {
-  font-family: var(--ff-primary);
-  font-weight: 500;
   position: relative;
   padding: var(--sp-16);
 
   @include breakpoint(medium) {
-    // font-size: var(--fs-reg);
+    padding: var(--sp-24);
+  }
+
+  @include breakpoint(large) {
+    padding: var(--sp-48);
   }
 }
 

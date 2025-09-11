@@ -4,14 +4,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--sp-16);
-  // padding: var(--sp-16);
+  margin: 0 auto;
+  width: 100%;
+  max-width: rem(1216);
 
   &__logo {
     img {
       width: rem(138);
       display: block;
       height: auto;
+    }
+  }
+
+  @include breakpoint(medium) {
+    &__logo {
+      img {
+        width: rem(197);
+      }
     }
   }
 }

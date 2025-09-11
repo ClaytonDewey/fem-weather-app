@@ -48,4 +48,24 @@
       margin-right: var(--sp-24);
     }
   }
+
+  @include breakpoint(medium) {
+    background-image: url('../../../public/images/bg-today-large.svg');
+    padding-inline: var(--sp-24);
+    flex-flow: row nowrap;
+    height: rem(286);
+
+    &__header {
+      text-align: left;
+      width: auto;
+    }
+
+    &__body {
+      width: rem(294);
+    }
+  }
+
+  @include breakpoint(large) {
+    margin-bottom: var(--sp-32);
+  }
 }

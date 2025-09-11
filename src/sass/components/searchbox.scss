@@ -1,10 +1,55 @@
 @use '../util' as *;
 
 .searchbox {
-  margin-bottom: var(--sp-48);
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-48) 0 var(--sp-32);
+  gap: var(--sp-48);
+
   h1 {
     font: var(--text-preset-2);
     letter-spacing: 0;
     text-align: center;
+    margin: 0;
+  }
+
+  @include breakpoint(medium) {
+    form {
+      display: flex;
+      align-items: stretch;
+      gap: var(--sp-16);
+      height: rem(56);
+      margin-inline: auto;
+      width: 100%;
+
+      input,
+      .btn {
+        height: rem(56);
+      }
+
+      .input {
+        width: 100%;
+      }
+
+      input {
+        // width: rem(590);
+      }
+
+      .btn {
+        max-width: rem(114);
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    padding: var(--sp-64) 0 var(--sp-48);
+    gap: var(--sp-64);
+
+    form {
+      max-width: rem(656);
+      input {
+        width: rem(526);
+      }
+    }
   }
 }
