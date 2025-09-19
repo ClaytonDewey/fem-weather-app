@@ -1,0 +1,43 @@
+@use '../util' as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  position: relative;
+}
+
+html,
+body {
+  margin: 0px auto;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--neutral-900);
+  color: var(--neutral-0);
+  font-family: var(--ff-primary);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: rem(1);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: rem(1);
+}

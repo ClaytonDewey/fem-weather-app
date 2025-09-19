@@ -1,0 +1,88 @@
+@use '../util' as *;
+
+.hero {
+  border-radius: var(--sp-20);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url('../../../public/images/bg-today-small.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: var(--sp-40) 0;
+  margin-bottom: var(--sp-20);
+
+  &__header {
+    width: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    font: var(--text-preset-4);
+    margin: 0;
+    padding: 0;
+    margin-bottom: var(--sp-12);
+  }
+
+  p {
+    color: var(--neutral-200);
+    font: var(--text-preset-6);
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .icon {
+      display: block;
+      width: rem(120);
+      height: auto;
+    }
+
+    .temp {
+      font: var(--text-preset-1);
+      letter-spacing: rem(-2);
+      margin-right: var(--sp-24);
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--sp-16);
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      gap: var(--sp-20);
+    }
+  }
+
+  @include breakpoint(medium) {
+    background-image: url('../../../public/images/bg-today-large.svg');
+    padding-inline: var(--sp-24);
+    flex-flow: row nowrap;
+    height: rem(286);
+
+    &__header {
+      text-align: left;
+      width: auto;
+    }
+
+    &__body {
+      width: rem(294);
+    }
+  }
+
+  @include breakpoint(large) {
+    margin-bottom: var(--sp-32);
+  }
+
+  &__wrapper {
+    margin-bottom: var(--sp-32);
+  }
+}

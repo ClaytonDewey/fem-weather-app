@@ -1,0 +1,50 @@
+@use '../util' as *;
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-6);
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--neutral-0);
+  transition: all 0.3s ease-in-out;
+
+  &-primary {
+    background-color: var(--blue-500);
+    color: var(--neutral-200);
+    font: var(--text-preset-5-md);
+    width: 100%;
+    height: rem(56);
+    border-radius: var(--sp-12);
+
+    &:hover {
+      background-color: var(--blue-700);
+    }
+
+    &:focus {
+      outline: rem(2) solid var(--blue-500);
+      outline-offset: rem(2);
+    }
+
+    @include breakpoint(medium) {
+      flex-shrink: 0;
+      width: rem(114);
+    }
+  }
+
+  &-secondary {
+    height: rem(33);
+    background-color: var(--neutral-800);
+    font: var(--text-preset-8);
+    border-radius: var(--sp-6);
+    padding-inline: var(--sp-10);
+
+    img {
+      width: rem(14);
+      height: rem(14);
+    }
+  }
+}

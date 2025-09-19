@@ -1,0 +1,25 @@
+@use '../util' as *;
+
+.grid {
+  display: grid;
+
+  &__daily {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--sp-16);
+    margin-bottom: var(--sp-32);
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 1fr;
+    }
+  }
+
+  @include breakpoint(large) {
+    &.results {
+      grid-template-columns: rem(800) 1fr;
+      grid-template-rows: 1fr;
+      gap: var(--sp-32);
+    }
+  }
+}

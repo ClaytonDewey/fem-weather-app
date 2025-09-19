@@ -1,0 +1,89 @@
+@use '../util' as *;
+
+:root {
+  // Colors
+  // Neutral
+  --neutral-900: #02012c;
+  --neutral-800: #262540;
+  --neutral-700: #302f4a;
+  --neutral-600: #3c3b5e;
+  --neutral-300: #acacb7;
+  --neutral-200: #d4d3d9;
+  --neutral-0: #ffffff;
+  --faded: rgba(172, 172, 183, 0.6);
+
+  // Orange
+  --orange-500: #ff820a;
+
+  // Blue
+  --blue-500: #4658d9;
+  --blue-700: #2b1b9c;
+
+  // Typography
+  --fs-4xlg: #{rem(96)};
+  --fs-3xlg: #{rem(52)};
+  --fs-2xlg: #{rem(32)};
+  --fs-xlg: #{rem(28)};
+  --fs-lg: #{rem(20)};
+  --fs-med: #{rem(18)};
+  --fs-sm: #{rem(16)};
+  --fs-xs: #{rem(14)};
+
+  --ff-primary: 'DM Sans', sans-serif;
+  --ff-secondary: 'Bricolage Grotesque', sans-serif;
+
+  --fw-light: 300;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --text-preset-1: italic normal var(--fw-semibold) var(--fs-4xlg) / 100%
+    var(--ff-primary);
+  --text-preset-2: normal normal var(--fw-bold) var(--fs-3xlg) / 120%
+    var(--ff-secondary);
+  --text-preset-3: normal normal var(--fw-light) var(--fs-2xlg) / 100%
+    var(--ff-primary);
+  --text-preset-4: normal normal var(--fw-bold) var(--fs-xlg) / 120%
+    var(--ff-primary);
+  --text-preset-5: normal normal var(--fw-semibold) var(--fs-lg) / 120%
+    var(--ff-primary);
+  --text-preset-5-md: normal normal var(--fw-medium) var(--fs-lg) / 120%
+    var(--ff-primary);
+  --text-preset-6: normal normal var(--fw-medium) var(--fs-med) / 120%
+    var(--ff-primary);
+  --text-preset-7: normal normal var(--fw-medium) var(--fs-sm) / 120%
+    var(--ff-primary);
+  --text-preset-8: normal normal var(--fw-medium) var(--fs-xs) / 120%
+    var(--ff-primary);
+
+  // Radii
+  --radius-4: #{rem(4)};
+  --radius-6: #{rem(6)};
+  --radius-8: #{rem(8)};
+  --radius-10: #{rem(10)};
+  --radius-12: #{rem(12)};
+  --radius-16: #{rem(16)};
+  --radius-20: #{rem(20)};
+  --radius-24: #{rem(24)};
+  --radius-full: #{rem(999)};
+
+  // Spacing
+  --sp-2: #{rem(2)};
+  --sp-4: #{rem(4)};
+  --sp-6: #{rem(6)};
+  --sp-8: #{rem(8)};
+  --sp-10: #{rem(10)};
+  --sp-12: #{rem(12)};
+  --sp-16: #{rem(16)};
+  --sp-20: #{rem(20)};
+  --sp-24: #{rem(24)};
+  --sp-32: #{rem(32)};
+  --sp-40: #{rem(40)};
+  --sp-48: #{rem(48)};
+  --sp-64: #{rem(64)};
+  --sp-80: #{rem(80)};
+  --sp-96: #{rem(96)};
+  --sp-112: #{rem(112)};
+  --sp-128: #{rem(128)};
+  --sp-140: #{rem(140)};
+}

@@ -1,0 +1,7 @@
+@use '../util' as *;
+
+h2 {
+  font: var(--text-preset-5);
+  color: var(--neutral-0);
+  margin-bottom: var(--sp-20);
+}

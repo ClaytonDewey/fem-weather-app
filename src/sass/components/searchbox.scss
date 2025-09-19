@@ -1,0 +1,101 @@
+@use '../util' as *;
+
+.searchbox {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-48) 0 var(--sp-32);
+  gap: var(--sp-48);
+
+  h1 {
+    font: var(--text-preset-2);
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-12);
+  }
+
+  @include breakpoint(medium) {
+    form {
+      position: relative;
+      flex-direction: row;
+      gap: var(--sp-16);
+      height: rem(56);
+      margin-inline: auto;
+      width: 100%;
+
+      .input {
+        width: 100%;
+      }
+
+      input {
+        height: rem(56);
+        transition: background-color 0.3s ease-in-out;
+        &:hover,
+        &:active {
+          background-color: var(--neutral-700);
+        }
+        &:focus {
+          color: var(--faded);
+          outline: rem(2) solid var(--neutral-0);
+          outline-offset: rem(2);
+          box-shadow: 0 0 0 rem(3) var(--neutral-900),
+            0 0 0 rem(5) var(--neutral-0);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    padding: var(--sp-64) 0 var(--sp-48);
+    gap: var(--sp-64);
+
+    form {
+      max-width: rem(656);
+      input {
+        width: rem(526);
+      }
+    }
+  }
+}
+
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: rem(25);
+  width: rem(25);
+  margin-right: rem(20);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+  cursor: pointer;
+}
+
+.input {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: var(--sp-24);
+  }
+
+  input {
+    display: flex;
+    align-items: center;
+    padding-left: rem(72);
+    height: rem(56);
+    width: 100%;
+    background-color: var(--neutral-800);
+    color: var(--neutral-200);
+    font: var(--text-preset-5-md);
+    border: none;
+    border-radius: var(--sp-12);
+
+    &::placeholder {
+      color: currentColor;
+    }
+  }
+}

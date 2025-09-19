@@ -1,0 +1,91 @@
+@use '../util' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--neutral-800);
+  border: 1px solid var(--neutral-600);
+  border-radius: var(--sp-12);
+  padding: var(--sp-20);
+  height: rem(118);
+  font: var(--text-preset-6);
+  text-transform: capitalize;
+
+  &__daily {
+    align-items: center;
+    height: rem(165);
+    padding: var(--sp-10) var(--sp-6);
+
+    .icon {
+      width: rem(60);
+    }
+  }
+
+  &__hourly {
+    height: auto;
+    padding: var(--sp-20) var(--sp-16);
+    gap: var(--sp-16);
+
+    .icon {
+      width: rem(40);
+    }
+
+    .card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+
+    .btn-secondary {
+      background-color: var(--neutral-600);
+    }
+  }
+
+  .title {
+    color: var(--neutral-200);
+  }
+
+  .info,
+  .day {
+    color: var(--neutral-0);
+  }
+
+  .info {
+    font: var(--text-preset-3);
+  }
+
+  .temp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font: var(--text-preset-7);
+  }
+
+  &__block {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: rem(60);
+    padding-inline: var(--sp-12);
+    background-color: var(--neutral-700);
+    border: 1px solid var(--neutral-600);
+    border-radius: var(--sp-8);
+    color: var(--neutral-0);
+    font: var(--text-preset-7);
+
+    .time {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-8);
+      font: var(--text-preset-5-md);
+    }
+  }
+}
