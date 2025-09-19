@@ -21,5 +21,10 @@
       grid-template-rows: 1fr;
       gap: var(--sp-32);
     }
+
+    &.no-results {
+      font: var(--text-preset-4);
+      text-align: center;
+    }
   }
 }

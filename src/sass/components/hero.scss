@@ -10,6 +10,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+  height: rem(286);
   padding: var(--sp-40) 0;
   margin-bottom: var(--sp-20);
 
@@ -84,5 +85,33 @@
 
   &__wrapper {
     margin-bottom: var(--sp-32);
+  }
+
+  &.loading {
+    justify-content: center;
+    gap: rem(14);
+    background-image: none;
+    background-color: var(--neutral-800);
+    color: var(--neutral-200);
+    font: var(--text-preset-6);
+
+    img {
+      height: rem(60);
+      animation: spin 3s linear infinite;
+      transform-origin: 50% 50%;
+    }
+
+    @include breakpoint(medium) {
+      flex-direction: column;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
