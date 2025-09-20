@@ -1,5 +1,8 @@
 export { Button } from './Button';
 export { Card } from './Card';
+export { Dropdown } from './Dropdown';
+export { DropdownButton } from './DropdownButton';
+export { DropdownContent } from './DropdownContent';
 export { Error } from './Error';
 export { Footer } from './Footer';
 export { Header } from './Header';
@@ -8,3 +11,4 @@ export { Input } from './Input';
 export { Main } from './Main';
 export { Results } from './Results';
 export { SearchBox } from './SearchBox';
+export { Unit } from './Unit';

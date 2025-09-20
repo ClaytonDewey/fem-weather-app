@@ -1,0 +1,45 @@
+@use '../util' as *;
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+
+  h3 {
+    text-transform: capitalize;
+    font: var(--text-preset-8);
+    color: var(--neutral-300);
+    margin: 0;
+    margin-left: var(--sp-8);
+  }
+
+  & > div {
+    margin-bottom: var(--sp-4);
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--neutral-600);
+    margin-bottom: var(--sp-10);
+  }
+
+  &-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: var(--neutral-0);
+    font: var(--text-preset-7);
+    padding-inline: var(--sp-8);
+    border: none;
+    border-radius: var(--radius-8);
+    height: rem(39);
+    width: 100%;
+    transition: all 0.25s ease-in-out;
+
+    &.active,
+    &:hover {
+      background-color: var(--neutral-700);
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@use '../util' as *;
+
+.dropdown {
+  position: relative;
+
+  .btn-secondary {
+    background-color: var(--neutral-600);
+  }
+  &__search,
+  &__content {
+    z-index: 9999;
+    right: 0;
+    top: rem(43);
+    padding: var(--sp-6) var(--sp-8);
+    background-color: var(--neutral-800);
+    border: 1px solid var(--neutral-600);
+    border-radius: var(--radius-12);
+    width: rem(214);
+    height: auto;
+    position: absolute;
+    min-width: 100%;
+    cursor: pointer;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__search {
+    width: rem(526);
+    max-width: rem(526);
+    top: rem(66);
+  }
+  &__content {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    --ms-overfly-style: none;
+    opacity: 0;
+    transform: translateY(-5%);
+    transition: transform 150ms ease-in-out, opacity 100ms ease-in-out;
+    pointer-events: none;
+
+    &.content-open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    @include breakpoint(medium) {
+      top: rem(53);
+    }
+  }
+}

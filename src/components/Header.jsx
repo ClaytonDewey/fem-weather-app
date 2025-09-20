@@ -1,9 +1,15 @@
-import { Button } from '.';
+import { useState } from 'react';
+import { Button, Dropdown, Unit } from '.';
 import iconLogo from '../icons/logo.svg';
 import iconUnits from '../icons/icon-units.svg';
-import iconDropdown from '../icons/icon-dropdown.svg';
 
 export const Header = () => {
+  const [units, setUnits] = useState('imperial');
+
+  const toggleUnits = () => {
+    units === 'imperial' ? setUnits('metric') : setUnits('imperial');
+  };
+
   return (
     <header className='header'>
       <div className='header__logo'>
@@ -11,11 +17,24 @@ export const Header = () => {
         <span className='sr-only'>Weather Now</span>
       </div>
       <div className='header__units'>
-        <Button className='btn btn-secondary'>
-          <img src={iconUnits} alt='' />
-          Units
-          <img src={iconDropdown} alt='' />
-        </Button>
+        <Dropdown
+          buttonText={
+            <>
+              <img src={iconUnits} alt='' />
+              Units
+            </>
+          }
+          content={
+            <>
+              <Button onClick={toggleUnits} className='btn btn-toggle'>
+                Switch to <span>{units}</span>
+              </Button>
+              <Unit title='temperature' units={units} />
+              <Unit title='wind speed' units={units} />
+              <Unit title='precipitation' units={units} />
+            </>
+          }
+        />
       </div>
     </header>
   );
