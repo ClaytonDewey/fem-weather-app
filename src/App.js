@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Header, Error, Main, Footer } from './components';
 import axios from 'axios';
-
+// https://medium.com/@aumairasad/bye-bye-useeffect-how-to-fetch-api-data-like-a-pro-in-react-fce815ddb7fe
 function App() {
   const apiUrl = 'https://api.open-meteo.com/v1';
   const [selectedCity, setSelectedCity] = useState({
