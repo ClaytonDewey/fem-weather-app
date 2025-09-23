@@ -56,17 +56,6 @@
   --text-preset-8: normal normal var(--fw-medium) var(--fs-xs) / 120%
     var(--ff-primary);
 
-  // Radii
-  --radius-4: #{rem(4)};
-  --radius-6: #{rem(6)};
-  --radius-8: #{rem(8)};
-  --radius-10: #{rem(10)};
-  --radius-12: #{rem(12)};
-  --radius-16: #{rem(16)};
-  --radius-20: #{rem(20)};
-  --radius-24: #{rem(24)};
-  --radius-full: #{rem(999)};
-
   // Spacing
   --sp-2: #{rem(2)};
   --sp-4: #{rem(4)};
@@ -86,4 +75,15 @@
   --sp-112: #{rem(112)};
   --sp-128: #{rem(128)};
   --sp-140: #{rem(140)};
+
+  // Radii
+  --radius-4: var(--sp-4);
+  --radius-6: var(--sp-6);
+  --radius-8: var(--sp-8);
+  --radius-10: var(--sp-10);
+  --radius-12: var(--sp-12);
+  --radius-16: var(--sp-16);
+  --radius-20: var(--sp-20);
+  --radius-24: var(--sp-24);
+  --radius-full: #{rem(999)};
 }
