@@ -11,6 +11,7 @@ export const Hero = ({ isLoading, city, weather }) => {
     temperature_2m,
     time,
   } = weather.current;
+
   const feelsLike = Math.round(apparent_temperature);
   const actual = Math.round(temperature_2m);
   const date = new Date(time);

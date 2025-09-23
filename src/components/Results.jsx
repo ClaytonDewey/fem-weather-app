@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { Button, Card, Hero } from '.';
 import iconDropdown from '../icons/icon-dropdown.svg';
 
-export const Results = ({ weather, city }) => {
-  const [isLoading, setIsLoading] = useState(false);
+export const Results = ({ isLoading, weather, city }) => {
   const [results, setResults] = useState([1]);
 
   return (
