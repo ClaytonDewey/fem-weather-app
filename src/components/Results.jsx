@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, Card, Hero } from '.';
 import iconDropdown from '../icons/icon-dropdown.svg';
 
-export const Results = () => {
+export const Results = ({ weather, city }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState([1]);
 
@@ -16,7 +16,7 @@ export const Results = () => {
       ) : (
         <>
           <div className='col-left'>
-            <Hero isLoading={isLoading} />
+            <Hero isLoading={isLoading} city={city} weather={weather} />
             <h2>Daily forecast</h2>
             <div className='grid grid__daily'>
               {isLoading ? (

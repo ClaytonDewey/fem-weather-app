@@ -1,15 +1,8 @@
-import { useState } from 'react';
 import { Button, Dropdown, Unit } from '.';
 import iconLogo from '../icons/logo.svg';
 import iconUnits from '../icons/icon-units.svg';
 
-export const Header = () => {
-  const [units, setUnits] = useState('imperial');
-
-  const toggleUnits = () => {
-    units === 'imperial' ? setUnits('metric') : setUnits('imperial');
-  };
-
+export const Header = ({ onClick, units }) => {
   return (
     <header className='header'>
       <div className='header__logo'>
@@ -26,7 +19,7 @@ export const Header = () => {
           }
           content={
             <>
-              <Button onClick={toggleUnits} className='btn btn-toggle'>
+              <Button onClick={onClick} className='btn btn-toggle'>
                 Switch to <span>{units}</span>
               </Button>
               <Unit title='temperature' units={units} />

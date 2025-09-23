@@ -1,10 +1,10 @@
 import { Results, SearchBox } from '.';
 
-export const Main = () => {
+export const Main = ({ onSelect, onSubmit, weather, selectedCity }) => {
   return (
     <div>
-      <SearchBox />
-      <Results />
+      <SearchBox onSelect={onSelect} onSubmit={onSubmit} />
+      <Results weather={weather} city={selectedCity} />
     </div>
   );
 };

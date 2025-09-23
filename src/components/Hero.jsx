@@ -1,7 +1,26 @@
 import { Card } from '.';
 import iconLoading from '../icons/icon-loading.svg';
 
-export const Hero = ({ isLoading }) => {
+export const Hero = ({ isLoading, city, weather }) => {
+  const { name, country, admin1 } = city;
+  const {
+    apparent_temperature,
+    precipitation,
+    relative_humidity_2m,
+    wind_speed_10m,
+    temperature_2m,
+    time,
+  } = weather.current;
+  const feelsLike = Math.round(apparent_temperature);
+  const actual = Math.round(temperature_2m);
+  const date = new Date(time);
+  const formatted = date.toLocaleDateString('en-us', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
   return (
     <section className='hero__wrapper'>
       <div className={`hero ${isLoading ? 'loading' : ''}`}>
@@ -13,12 +32,14 @@ export const Hero = ({ isLoading }) => {
         ) : (
           <>
             <div className='hero__header'>
-              <h2>Berlin, Germany</h2>
-              <p>Tuesday, Aug 5, 2025</p>
+              <h2>
+                {name}, {country !== 'US' ? country : admin1}
+              </h2>
+              <p>{formatted}</p>
             </div>
             <div className='hero__body'>
               <img src='/images/icon-sunny.webp' alt='' className='icon' />
-              <div className='temp'>68&deg;</div>
+              <div className='temp'>{actual}&deg;</div>
             </div>
           </>
         )}
@@ -31,7 +52,7 @@ export const Hero = ({ isLoading }) => {
               {isLoading ? (
                 <p className='info'>-</p>
               ) : (
-                <p className='info'>64&deg;</p>
+                <p className='info'>{feelsLike}&deg;</p>
               )}
             </>
           }
@@ -43,7 +64,7 @@ export const Hero = ({ isLoading }) => {
               {isLoading ? (
                 <p className='info'>-</p>
               ) : (
-                <p className='info'>46%</p>
+                <p className='info'>{relative_humidity_2m}%</p>
               )}
             </>
           }
@@ -55,7 +76,7 @@ export const Hero = ({ isLoading }) => {
               {isLoading ? (
                 <p className='info'>-</p>
               ) : (
-                <p className='info'>9 mph</p>
+                <p className='info'>{wind_speed_10m} mph</p>
               )}
             </>
           }
@@ -67,7 +88,7 @@ export const Hero = ({ isLoading }) => {
               {isLoading ? (
                 <p className='info'>-</p>
               ) : (
-                <p className='info'>0 in</p>
+                <p className='info'>{precipitation} in</p>
               )}
             </>
           }
