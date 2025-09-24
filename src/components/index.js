@@ -5,6 +5,7 @@ export { DropdownButton } from './DropdownButton';
 export { DropdownContent } from './DropdownContent';
 export { Error } from './Error';
 export { Footer } from './Footer';
+export { ForecastDaily } from './ForecastDaily';
 export { Header } from './Header';
 export { Hero } from './Hero';
 export { Input } from './Input';
