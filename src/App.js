@@ -24,7 +24,7 @@ function App() {
   const lat = selectedCity.latitude;
   const lon = selectedCity.longitude;
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['weather', { lat, lon }],
+    queryKey: ['weather', { lat, lon, units }],
     queryFn: fetchWeather,
     staleTime: 1000 * 60 * 5,
     enabled: lat != null && lon !== null,
@@ -40,7 +40,6 @@ function App() {
   //   fetchWeather(selectedCity.latitude, selectedCity.longitude);
   // }, [selectedCity.latitude, selectedCity.longitude]);
 
-  console.log(data);
   if (isLoading) return <p>Loading...</p>;
   return (
     <div className='container'>

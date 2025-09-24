@@ -20,7 +20,8 @@ export const Header = ({ onClick, units }) => {
           content={
             <>
               <Button onClick={onClick} className='btn btn-toggle'>
-                Switch to <span>{units}</span>
+                Switch to{' '}
+                <span>{units === 'imperial' ? 'metric' : 'imperial'}</span>
               </Button>
               <Unit title='temperature' units={units} />
               <Unit title='wind speed' units={units} />

@@ -3,6 +3,7 @@ import iconLoading from '../icons/icon-loading.svg';
 
 export const Hero = ({ isLoading, city, weather }) => {
   const { name, country, admin1 } = city;
+
   const {
     apparent_temperature,
     precipitation,
@@ -34,7 +35,10 @@ export const Hero = ({ isLoading, city, weather }) => {
           <>
             <div className='hero__header'>
               <h2>
-                {name}, {country !== 'US' ? country : admin1}
+                {name},{' '}
+                {country === 'US' || country === 'United States'
+                  ? admin1
+                  : country}
               </h2>
               <p>{formatted}</p>
             </div>

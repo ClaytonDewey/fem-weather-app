@@ -4,7 +4,7 @@ import { fetchCity } from '../api/fetchCity';
 import { Button, Input } from '.';
 import iconSearch from '../icons/icon-search.svg';
 
-export const SearchBox = ({ onSelect, onSubmit }) => {
+export const SearchBox = ({ onSelect }) => {
   const [search, setSearch] = useState('');
 
   const { data, isLoading, isError, error } = useQuery({
@@ -14,10 +14,22 @@ export const SearchBox = ({ onSelect, onSubmit }) => {
     staleTime: 1000 * 60 * 5,
   });
 
+  const handleSelect = (city) => {
+    const { name, admin1, country, latitude, longitude } = city;
+    onSelect({
+      name,
+      admin1,
+      country,
+      latitude,
+      longitude,
+    });
+    setSearch('');
+  };
+
   return (
     <div className='searchbox'>
       <h1>How&apos;s the sky looking today?</h1>
-      <form onSubmit={onSubmit}>
+      <form>
         <Input
           name='search'
           icon={iconSearch}
@@ -32,7 +44,10 @@ export const SearchBox = ({ onSelect, onSubmit }) => {
         {data?.results && (
           <div className='dropdown__search'>
             {data.results.map((city) => (
-              <Button className='btn-unit' key={city.id}>
+              <Button
+                className='btn-unit'
+                key={city.id}
+                onClick={() => handleSelect(city)}>
                 {city.name}
                 {city.admin1 ? `, ${city.admin1}` : ''}, {city.country}
               </Button>

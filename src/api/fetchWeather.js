@@ -1,7 +1,12 @@
-export const fetchWeather = async ({ queryKey, signal }) => {
-  const [_key, { lat, lon }] = queryKey;
+// fetchWeather.js
+export const fetchWeather = async ({ queryKey, signal } = {}) => {
+  const [_key, params] = queryKey || [];
+  if (!params) return null;
 
-  // Define the parameters
+  const { lat, lon, units } = params;
+
+  if (lat == null || lon == null) return null;
+
   const daily = ['temperature_2m_max', 'temperature_2m_min', 'weather_code'];
   const hourly = ['temperature_2m', 'weather_code'];
   const current = [
@@ -18,10 +23,16 @@ export const fetchWeather = async ({ queryKey, signal }) => {
   url.searchParams.set('longitude', lon);
   url.searchParams.set('daily', daily.join(','));
   url.searchParams.set('hourly', hourly.join(','));
-  // "current" params are added as individual fields in Open-Meteo v1:
   url.searchParams.set('current', current.join(','));
-  // Optional: timezone so daily data is meaningful
   url.searchParams.set('timezone', 'auto');
+
+  // ✅ Add unit parameters if user selects imperial
+  if (units === 'imperial') {
+    url.searchParams.set('wind_speed_unit', 'mph');
+    url.searchParams.set('temperature_unit', 'fahrenheit');
+    url.searchParams.set('precipitation_unit', 'inch');
+  }
+  // (You can add other unit systems, e.g. 'metric' defaults to API’s SI units)
 
   const res = await fetch(url.toString(), { signal });
   if (!res.ok) throw new Error('Network error');
