@@ -1,7 +1,7 @@
 import { Card, WeatherIcons } from '.';
 
 export const ForecastDaily = ({ forecast }) => {
-  const { time, weather_code, temperature_2m_max, termperatur_2m_min } =
+  const { time, weather_code, temperature_2m_max, temperature_2m_min } =
     forecast;
 
   return (
@@ -9,14 +9,15 @@ export const ForecastDaily = ({ forecast }) => {
       <h2>Daily forecast</h2>
       <div className='grid grid__daily'>
         {time.map((date, i) => {
-          const dayName = new Date(date).toLocaleDateString(undefined, {
+          const dayName = new Date(date).toLocaleDateString('en-us', {
             weekday: 'short',
           });
           const high = Math.round(temperature_2m_max[i]);
-          const low = Math.round(termperatur_2m_min[i]);
-          console.log(dayName, high, low);
+          const low = Math.round(temperature_2m_min[i]);
+
           return (
             <Card
+              key={date}
               type='daily'
               content={
                 <>
