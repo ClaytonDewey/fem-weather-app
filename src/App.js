@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Header, Error, Main, Footer } from './components';
+import { Header, Error, Main, Footer, Loading } from './components';
 import { useQuery } from '@tanstack/react-query';
 import { fetchWeather } from './api/fetchWeather';
 
@@ -40,15 +40,14 @@ function App() {
   //   fetchWeather(selectedCity.latitude, selectedCity.longitude);
   // }, [selectedCity.latitude, selectedCity.longitude]);
 
-  if (isLoading) return <p>Loading...</p>;
   return (
     <div className='container'>
       <Header onClick={toggleUnits} units={units} />
-      {isError ? (
-        <Error />
+      {isError && <Error />}
+      {isLoading ? (
+        <Loading />
       ) : (
         <Main
-          isLoading={isLoading}
           onSelect={handleCitySelect}
           onSubmit={handleSubmit}
           selectedCity={selectedCity}
