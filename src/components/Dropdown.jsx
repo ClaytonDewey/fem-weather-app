@@ -26,17 +26,47 @@ export const Dropdown = ({ buttonText, content }) => {
   const closeDropdown = () => setOpen(false);
 
   useEffect(() => {
-    const handler = (event) => {
+    const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setOpen(false);
+        closeDropdown();
       }
     };
-    document.addEventListener('click', handler);
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeDropdown();
+      }
+
+      if (event.key === 'Tab' && open && contentRef.current) {
+        const focusableElements = contentRef.current.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const focusable = Array.from(focusableElements);
+
+        if (focusable.length === 0) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        const active = document.activeElement;
+
+        if (!event.shiftKey && active === last) {
+          event.preventDefault();
+          first.focus();
+        } else if (event.shiftKey && active === first) {
+          event.preventDefault();
+          last.focus();
+        }
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      document.removeEventListener('click', handler);
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [dropdownRef]);
+  }, [open]);
 
   return (
     <div className='dropdown' ref={dropdownRef}>
@@ -44,9 +74,7 @@ export const Dropdown = ({ buttonText, content }) => {
         {buttonText}
       </DropdownButton>
       <DropdownContent top={dropdownTop} open={open} ref={contentRef}>
-        {typeof content === 'function'
-          ? content({ closeDropdown }) // ✅ pass down here
-          : content}
+        {typeof content === 'function' ? content({ closeDropdown }) : content}
       </DropdownContent>
     </div>
   );
