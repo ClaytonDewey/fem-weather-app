@@ -28,9 +28,24 @@ export const Header = ({ onClick, units }) => {
                 Switch to{' '}
                 <span>{units === 'imperial' ? 'metric' : 'imperial'}</span>
               </Button>
-              <Unit title='temperature' units={units} />
-              <Unit title='wind speed' units={units} />
-              <Unit title='precipitation' units={units} />
+              <Unit
+                title='temperature'
+                units={units}
+                metric='Celcius(°C)'
+                imperial='Fahrenheit(°F)'
+              />
+              <Unit
+                title='wind speed'
+                units={units}
+                metric='km/h'
+                imperial='mph'
+              />
+              <Unit
+                title='precipitation'
+                units={units}
+                metric='Millimeters(mm)'
+                imperial='Inches(in)'
+              />
             </>
           )}
         />
