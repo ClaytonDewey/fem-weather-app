@@ -29,7 +29,7 @@ export const SearchBox = ({ onSelect }) => {
   return (
     <div className='searchbox'>
       <h1>How&apos;s the sky looking today?</h1>
-      <form>
+      <div className='form'>
         <Input
           name='search'
           icon={iconSearch}
@@ -57,7 +57,7 @@ export const SearchBox = ({ onSelect }) => {
         <Button type='search' className='btn btn-primary'>
           Search
         </Button>
-      </form>
+      </div>
     </div>
   );
 };
