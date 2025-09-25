@@ -17,9 +17,14 @@ export const Header = ({ onClick, units }) => {
               Units
             </>
           }
-          content={
+          content={({ closeDropdown }) => (
             <>
-              <Button onClick={onClick} className='btn btn-toggle'>
+              <Button
+                onClick={() => {
+                  closeDropdown();
+                  onClick();
+                }}
+                className='btn btn-toggle'>
                 Switch to{' '}
                 <span>{units === 'imperial' ? 'metric' : 'imperial'}</span>
               </Button>
@@ -27,7 +32,7 @@ export const Header = ({ onClick, units }) => {
               <Unit title='wind speed' units={units} />
               <Unit title='precipitation' units={units} />
             </>
-          }
+          )}
         />
       </div>
     </header>

@@ -12,28 +12,46 @@ export const ForecastHourly = ({ weather }) => {
               <h2>Hourly Forecast</h2>
               <Dropdown
                 buttonText='Tuesday'
-                content={
+                content={({ closeDropdown }) => (
                   <div className='btn-container'>
-                    <Button type='button' className='btn active'>
+                    <Button
+                      onClick={() => closeDropdown()}
+                      type='button'
+                      className='btn active'>
                       Wednesday
                     </Button>
-                    <Button type='button' className='btn'>
+                    <Button
+                      onClick={() => closeDropdown()}
+                      type='button'
+                      className='btn'>
                       Thursday
                     </Button>
-                    <Button type='button' className='btn'>
+                    <Button
+                      onClick={() => closeDropdown()}
+                      type='button'
+                      className='btn'>
                       Friday
                     </Button>
-                    <Button type='button' className='btn'>
+                    <Button
+                      onClick={() => closeDropdown()}
+                      type='button'
+                      className='btn'>
                       Saturday
                     </Button>
-                    <Button type='button' className='btn'>
+                    <Button
+                      onClick={() => closeDropdown()}
+                      type='button'
+                      className='btn'>
                       Sunday
                     </Button>
-                    <Button type='button' className='btn'>
+                    <Button
+                      onClick={() => closeDropdown()}
+                      type='button'
+                      className='btn'>
                       Monday
                     </Button>
                   </div>
-                }
+                )}
               />
             </div>
             <div className='card__block'>

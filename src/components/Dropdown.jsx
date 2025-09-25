@@ -23,6 +23,8 @@ export const Dropdown = ({ buttonText, content }) => {
     setOpen((open) => !open);
   };
 
+  const closeDropdown = () => setOpen(false);
+
   useEffect(() => {
     const handler = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -42,7 +44,9 @@ export const Dropdown = ({ buttonText, content }) => {
         {buttonText}
       </DropdownButton>
       <DropdownContent top={dropdownTop} open={open} ref={contentRef}>
-        {content}
+        {typeof content === 'function'
+          ? content({ closeDropdown }) // ✅ pass down here
+          : content}
       </DropdownContent>
     </div>
   );
