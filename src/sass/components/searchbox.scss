@@ -13,14 +13,14 @@
     margin: 0;
   }
 
-  form {
+  .form {
     display: flex;
     flex-direction: column;
     gap: var(--sp-12);
   }
 
   @include breakpoint(medium) {
-    form {
+    .form {
       position: relative;
       flex-direction: row;
       gap: var(--sp-16);
@@ -54,7 +54,7 @@
     padding: var(--sp-64) 0 var(--sp-48);
     gap: var(--sp-64);
 
-    form {
+    .form {
       max-width: rem(656);
       input {
         width: rem(526);
