@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Button, Card, ForecastDaily, ForecastHourly, Hero } from '.';
-import iconDropdown from '../icons/icon-dropdown.svg';
+import { ForecastDaily, ForecastHourly, Hero } from '.';
 
-export const Results = ({ weather, city }) => {
+export const Results = ({ weather, city, units }) => {
   const [results, setResults] = useState([1]);
 
   return (
@@ -15,7 +14,7 @@ export const Results = ({ weather, city }) => {
       ) : (
         <>
           <div className='col-left'>
-            <Hero city={city} weather={weather} />
+            <Hero units={units} city={city} weather={weather} />
             <ForecastDaily forecast={weather.daily} />
           </div>
 

@@ -1,6 +1,6 @@
 import { Card, WeatherIcons } from '.';
 
-export const Hero = ({ city, weather }) => {
+export const Hero = ({ city, weather, units }) => {
   const { name, country, admin1 } = city;
 
   const {
@@ -23,6 +23,15 @@ export const Hero = ({ city, weather }) => {
     month: 'short',
     day: 'numeric',
   });
+  console.log(units);
+  let windLabel, precipitationLabel;
+  if (units === 'imperial') {
+    windLabel = 'mph';
+    precipitationLabel = 'in';
+  } else {
+    windLabel = 'km/h';
+    precipitationLabel = 'mm';
+  }
 
   return (
     <section className='hero__wrapper'>
@@ -43,7 +52,7 @@ export const Hero = ({ city, weather }) => {
         <Card
           content={
             <>
-              <p className='title'>feels like</p>
+              <p className='title'>Feels like</p>
               <p className='info'>{feelsLike}&deg;</p>
             </>
           }
@@ -51,7 +60,7 @@ export const Hero = ({ city, weather }) => {
         <Card
           content={
             <>
-              <p className='title'>humidity</p>
+              <p className='title'>Humidity</p>
               <p className='info'>{relative_humidity_2m}%</p>
             </>
           }
@@ -59,16 +68,20 @@ export const Hero = ({ city, weather }) => {
         <Card
           content={
             <>
-              <p className='title'>wind</p>
-              <p className='info'>{windSpeed} mph</p>
+              <p className='title'>Wind</p>
+              <p className='info'>
+                {windSpeed} {windLabel}
+              </p>
             </>
           }
         />
         <Card
           content={
             <>
-              <p className='title'>precipitation</p>
-              <p className='info'>{precipitation} in</p>
+              <p className='title'>Precipitation</p>
+              <p className='info'>
+                {precipitation} {precipitationLabel}
+              </p>
             </>
           }
         />

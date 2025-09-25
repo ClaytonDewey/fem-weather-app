@@ -48,6 +48,7 @@ function App() {
         <Loading />
       ) : (
         <Main
+          units={units}
           onSelect={handleCitySelect}
           onSubmit={handleSubmit}
           selectedCity={selectedCity}
