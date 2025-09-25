@@ -23,7 +23,7 @@ export const Hero = ({ city, weather, units }) => {
     month: 'short',
     day: 'numeric',
   });
-  console.log(units);
+
   let windLabel, precipitationLabel;
   if (units === 'imperial') {
     windLabel = 'mph';

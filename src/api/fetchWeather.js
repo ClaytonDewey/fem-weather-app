@@ -1,4 +1,3 @@
-// fetchWeather.js
 export const fetchWeather = async ({ queryKey, signal } = {}) => {
   const [_key, params] = queryKey || [];
   if (!params) return null;
