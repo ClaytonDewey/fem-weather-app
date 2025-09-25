@@ -10,7 +10,6 @@
   padding: var(--sp-20);
   height: rem(118);
   font: var(--text-preset-6);
-  text-transform: capitalize;
 
   &__daily {
     align-items: center;
@@ -97,6 +96,7 @@
       align-items: center;
       gap: var(--sp-8);
       font: var(--text-preset-5-md);
+      text-transform: uppercase;
     }
   }
 }
