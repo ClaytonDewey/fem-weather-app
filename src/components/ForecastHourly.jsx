@@ -40,19 +40,20 @@ export const ForecastHourly = ({ weather }) => {
                 )}
               />
             </div>
-
-            {/* Render hours for selected day */}
-            {selectedHours.map((hour) => (
-              <div key={hour.time} className='card__block hourly-forecast'>
-                <div className='time'>
-                  <WeatherIcons code={hour.code} />
-                  {hour.time.toLocaleTimeString('en-us', {
-                    hour: 'numeric',
-                  })}
+            <div className='card__scroll'>
+              {/* Render hours for selected day */}
+              {selectedHours.map((hour) => (
+                <div key={hour.time} className='card__block hourly-forecast'>
+                  <div className='time'>
+                    <WeatherIcons code={hour.code} />
+                    {hour.time.toLocaleTimeString('en-us', {
+                      hour: 'numeric',
+                    })}
+                  </div>
+                  <div>{Math.round(hour.temp)}&deg;</div>
                 </div>
-                <div>{Math.round(hour.temp)}&deg;</div>
-              </div>
-            ))}
+              ))}
+            </div>
           </>
         }
       />
