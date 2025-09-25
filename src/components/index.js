@@ -6,6 +6,7 @@ export { DropdownContent } from './DropdownContent';
 export { Error } from './Error';
 export { Footer } from './Footer';
 export { ForecastDaily } from './ForecastDaily';
+export { ForecastHourly } from './ForecastHourly';
 export { Header } from './Header';
 export { Hero } from './Hero';
 export { Input } from './Input';
