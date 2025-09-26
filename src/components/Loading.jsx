@@ -1,8 +1,9 @@
-import { Button, Card, SearchBox } from '.';
+import { Card, SearchBox } from '.';
 import iconLoading from '../icons/icon-loading.svg';
 import iconDropdown from '../icons/icon-dropdown.svg';
 
 export const Loading = () => {
+  const today = new Date().toLocaleDateString('en-us', { weekday: 'long' });
   return (
     <>
       <div>
@@ -63,28 +64,27 @@ export const Loading = () => {
           </div>
 
           <div className='col-right'>
-            <Card
-              type='hourly'
-              content={
-                <>
-                  <div className='card__header'>
-                    <h2>Hourly Forecast</h2>
-                    <Button className='btn btn-secondary'>
-                      &nbsp;
-                      <img src={iconDropdown} alt='' />
-                    </Button>
-                  </div>
-                  <div className='card__block'></div>
-                  <div className='card__block'></div>
-                  <div className='card__block'></div>
-                  <div className='card__block'></div>
-                  <div className='card__block'></div>
-                  <div className='card__block'></div>
-                  <div className='card__block'></div>
-                  <div className='card__block'></div>
-                </>
-              }
-            />
+            <div className='card card__hourly'>
+              <div className='card__header'>
+                <h2>Hourly Forecast</h2>
+                <div className='dropdown'>
+                  <button className='btn btn-secondary'>
+                    {today}
+                    <img src={iconDropdown} alt='' />
+                  </button>
+                </div>
+              </div>
+              <div className='card__scroll'>
+                <div className='card__block'></div>
+                <div className='card__block'></div>
+                <div className='card__block'></div>
+                <div className='card__block'></div>
+                <div className='card__block'></div>
+                <div className='card__block'></div>
+                <div className='card__block'></div>
+                <div className='card__block'></div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
