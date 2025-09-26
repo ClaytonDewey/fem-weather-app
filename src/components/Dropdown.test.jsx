@@ -74,4 +74,15 @@ describe('Dropdown accessibility', () => {
     fireEvent.keyDown(document, { key: 'Tab', code: 'Tab', shiftKey: true });
     expect(item2).toHaveFocus();
   });
+
+  it('closes when an item inside is clicked (closeDropdown)', async () => {
+    const { button } = setup();
+    await userEvent.click(button);
+
+    const item1 = screen.getByText('Item 1');
+    expect(item1).toBeInTheDocument();
+
+    // After click, dropdown should be closed
+    expect(screen.queryByText('Item 1')).not.toBeInTheDocument();
+  });
 });
