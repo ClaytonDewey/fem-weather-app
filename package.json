@@ -2,6 +2,7 @@
   "name": "fem-weather-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://claytondewey.github.io/fem-weather-app",
   "dependencies": {
     "@tanstack/react-query": "^5.90.2",
     "@tanstack/react-query-devtools": "^5.90.2",
