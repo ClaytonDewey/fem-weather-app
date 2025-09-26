@@ -40,7 +40,7 @@ export const ForecastHourly = ({ weather }) => {
                 )}
               />
             </div>
-            <div className='card__scroll'>
+            <div className='card__scroll' tabIndex='0'>
               {/* Render hours for selected day */}
               {selectedHours.map((hour) => (
                 <div key={hour.time} className='card__block hourly-forecast'>
