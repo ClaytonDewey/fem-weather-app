@@ -1,17 +1,17 @@
-import { useState } from 'react';
 import { Header, Error, Main, Footer, Loading } from './components';
 import { useQuery } from '@tanstack/react-query';
+import useLocalStorage from './hooks/useLocalStorage';
 import { fetchWeather } from './api/fetchWeather';
 
 function App() {
-  const [selectedCity, setSelectedCity] = useState({
+  const [selectedCity, setSelectedCity] = useLocalStorage('city', {
     name: 'Madison',
     admin1: 'Wisconsin',
     country: 'US',
     latitude: 43.07305,
     longitude: -89.40123,
   });
-  const [units, setUnits] = useState('imperial');
+  const [units, setUnits] = useLocalStorage('units', 'imperial');
 
   const handleCitySelect = (city) => {
     setSelectedCity(city);
