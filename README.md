@@ -16,8 +16,6 @@ This is a solution to the [Weather app challenge on Frontend Mentor](https://www
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -99,8 +97,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - Website - [Clayton Dewey](https://www.claytondewey.com)
 - Frontend Mentor - [@ClaytonDewey](https://www.frontendmentor.io/profile/ClaytonDewey)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 

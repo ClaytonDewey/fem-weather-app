@@ -32,6 +32,6 @@ export const WeatherIcons = ({ code }) => {
 
   const iconSrc = iconMap[code];
   return (
-    <img src={`/images/${iconSrc}`} loading='lazy' alt='' className='icon' />
+    <img src={`./images/${iconSrc}`} loading='lazy' alt='' className='icon' />
   );
 };
