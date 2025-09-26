@@ -1,6 +1,7 @@
 import { Button, Dropdown, Unit } from '.';
 import iconLogo from '../icons/logo.svg';
 import iconUnits from '../icons/icon-units.svg';
+import iconCheck from '../icons/icon-checkmark.svg';
 
 export const Header = ({ onClick, units }) => {
   return (
@@ -28,24 +29,87 @@ export const Header = ({ onClick, units }) => {
                 Switch to{' '}
                 <span>{units === 'imperial' ? 'metric' : 'imperial'}</span>
               </Button>
-              <Unit
-                title='temperature'
-                units={units}
-                metric='Celcius(°C)'
-                imperial='Fahrenheit(°F)'
-              />
-              <Unit
-                title='wind speed'
-                units={units}
-                metric='km/h'
-                imperial='mph'
-              />
-              <Unit
-                title='precipitation'
-                units={units}
-                metric='Millimeters(mm)'
-                imperial='Inches(in)'
-              />
+              <section className='unit'>
+                <h3>temperature</h3>
+                <Button
+                  className={`unit-item ${
+                    units === 'metric' ? 'active' : null
+                  }`}
+                  onClick={() => {
+                    closeDropdown();
+                    onClick();
+                  }}>
+                  Celcius(&deg;C)
+                  {units === 'metric' && <img src={iconCheck} alt='selected' />}
+                </Button>
+                <Button
+                  className={`unit-item ${
+                    units === 'imperial' ? 'active' : null
+                  }`}
+                  onClick={() => {
+                    closeDropdown();
+                    onClick();
+                  }}>
+                  Fahrenheit(&deg;F)
+                  {units === 'imperial' && (
+                    <img src={iconCheck} alt='selected' />
+                  )}
+                </Button>
+              </section>
+              <section className='unit'>
+                <h3>wind speed</h3>
+                <Button
+                  className={`unit-item ${
+                    units === 'metric' ? 'active' : null
+                  }`}
+                  onClick={() => {
+                    closeDropdown();
+                    onClick();
+                  }}>
+                  km/h
+                  {units === 'metric' && <img src={iconCheck} alt='selected' />}
+                </Button>
+                <Button
+                  className={`unit-item ${
+                    units === 'imperial' ? 'active' : null
+                  }`}
+                  onClick={() => {
+                    closeDropdown();
+                    onClick();
+                  }}>
+                  mph
+                  {units === 'imperial' && (
+                    <img src={iconCheck} alt='selected' />
+                  )}
+                </Button>
+              </section>
+              <section className='unit'>
+                <h3>precipitation</h3>
+                <Button
+                  className={`unit-item ${
+                    units === 'metric' ? 'active' : null
+                  }`}
+                  onClick={() => {
+                    closeDropdown();
+                    onClick();
+                  }}>
+                  Millimeters(mm)
+                  {units === 'metric' && <img src={iconCheck} alt='selected' />}
+                </Button>
+                <Button
+                  className={`unit-item ${
+                    units === 'imperial' ? 'active' : null
+                  }`}
+                  onClick={() => {
+                    closeDropdown();
+                    onClick();
+                  }}>
+                  Inches(in)
+                  {units === 'imperial' && (
+                    <img src={iconCheck} alt='selected' />
+                  )}
+                </Button>
+              </section>
             </>
           )}
         />
