@@ -30,30 +30,36 @@ export const SearchBox = ({ onSelect }) => {
     <div className='searchbox'>
       <h1>How&apos;s the sky looking today?</h1>
       <div className='form'>
-        <Input
-          name='search'
-          icon={iconSearch}
-          placeholder='Search for a place...'
-          type='search'
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+        <div className='input'>
+          <Input
+            name='search'
+            icon={iconSearch}
+            placeholder='Search for a place...'
+            type='search'
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
 
-        {isLoading && <p>Searching...</p>}
-        {isError && <p>Error: {error.message}</p>}
-        {data?.results && (
-          <div className='dropdown__search'>
-            {data.results.map((city) => (
-              <Button
-                className='btn-unit'
-                key={city.id}
-                onClick={() => handleSelect(city)}>
-                {city.name}
-                {city.admin1 ? `, ${city.admin1}` : ''}, {city.country}
-              </Button>
-            ))}
-          </div>
-        )}
+          {/* {isLoading && (
+            <div className='dropdown__search'>
+              <p className='btn-unit'>Searching...</p>
+            </div>
+          )} */}
+          {isError && <p>Error: {error.message}</p>}
+          {data?.results && (
+            <div className='dropdown__search'>
+              {data.results.map((city) => (
+                <Button
+                  className='btn-unit'
+                  key={city.id}
+                  onClick={() => handleSelect(city)}>
+                  {city.name}
+                  {city.admin1 ? `, ${city.admin1}` : ''}, {city.country}
+                </Button>
+              ))}
+            </div>
+          )}
+        </div>
         <Button type='search' className='btn btn-primary'>
           Search
         </Button>
