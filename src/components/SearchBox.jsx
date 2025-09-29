@@ -6,6 +6,7 @@ import iconSearch from '../icons/icon-search.svg';
 
 export const SearchBox = ({ onSelect }) => {
   const [search, setSearch] = useState('');
+  const [city, setCity] = useState(null);
 
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['citySearch', search],
@@ -16,7 +17,7 @@ export const SearchBox = ({ onSelect }) => {
 
   const handleSelect = (city) => {
     const { name, admin1, country, latitude, longitude } = city;
-    onSelect({
+    setCity({
       name,
       admin1,
       country,
@@ -26,25 +27,35 @@ export const SearchBox = ({ onSelect }) => {
     setSearch('');
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSelect(city);
+    setCity(null);
+  };
+
   return (
     <div className='searchbox'>
       <h1>How&apos;s the sky looking today?</h1>
-      <div className='form'>
+      <form onSubmit={handleSubmit}>
         <div className='input'>
           <Input
             name='search'
             icon={iconSearch}
             placeholder='Search for a place...'
             type='search'
-            value={search}
+            value={
+              city
+                ? `${city.name}, ${city.admin1 ? city.admin1 : city.country}`
+                : null
+            }
             onChange={(e) => setSearch(e.target.value)}
           />
 
-          {/* {isLoading && (
+          {isLoading && (
             <div className='dropdown__search'>
               <p className='btn-unit'>Searching...</p>
             </div>
-          )} */}
+          )}
           {isError && <p>Error: {error.message}</p>}
           {data?.results && (
             <div className='dropdown__search'>
@@ -63,7 +74,7 @@ export const SearchBox = ({ onSelect }) => {
         <Button type='search' className='btn btn-primary'>
           Search
         </Button>
-      </div>
+      </form>
     </div>
   );
 };
