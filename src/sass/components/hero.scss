@@ -12,7 +12,6 @@
   background-position: top center;
   height: rem(286);
   padding: var(--sp-40) 0;
-  margin-bottom: var(--sp-20);
 
   &__header {
     width: 100%;
@@ -80,11 +79,13 @@
   }
 
   @include breakpoint(large) {
-    margin-bottom: var(--sp-32);
+    // margin-bottom: var(--sp-32);
   }
 
   &__wrapper {
-    margin-bottom: var(--sp-32);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-32);
   }
 
   &.loading {

@@ -2,12 +2,13 @@
 
 .grid {
   display: grid;
+  gap: var(--sp-32);
 
   &__daily {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: var(--sp-16);
-    margin-bottom: var(--sp-32);
+    // margin-bottom: var(--sp-32);
 
     @include breakpoint(medium) {
       grid-template-columns: repeat(7, 1fr);
@@ -27,4 +28,11 @@
       text-align: center;
     }
   }
+}
+
+.col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--sp-32);
 }
