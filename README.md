@@ -97,7 +97,7 @@ Eventually I would like to look into using the browser Geolocation API to load l
 
 ### Useful resources
 
-- [TanStack Query Dock](https://tanstack.com/query/latest/docs/framework/react/overview) - Helped me build the location and weather search queries.
+- [TanStack Query Docs](https://tanstack.com/query/latest/docs/framework/react/overview) - Helped me build the location and weather search queries.
 
 ## Author
 
