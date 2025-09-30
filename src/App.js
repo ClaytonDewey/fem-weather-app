@@ -35,15 +35,18 @@ function App() {
     fetchWeather(selectedCity.latitude, selectedCity.longitude);
   };
 
-  // useEffect(() => {
-  //   // fetch weather for default city on first render
-  //   fetchWeather(selectedCity.latitude, selectedCity.longitude);
-  // }, [selectedCity.latitude, selectedCity.longitude]);
+  if (isError) {
+    return (
+      <div className='container'>
+        <Header />
+        <Error />
+      </div>
+    );
+  }
 
   return (
     <div className='container'>
       <Header onClick={toggleUnits} units={units} />
-      {isError && <Error />}
       {isLoading ? (
         <Loading />
       ) : (
