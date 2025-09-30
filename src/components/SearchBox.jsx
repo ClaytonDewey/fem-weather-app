@@ -3,10 +3,12 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchCity } from '../api/fetchCity';
 import { Button, Input } from '.';
 import iconSearch from '../icons/icon-search.svg';
+import iconLoading from '../icons/icon-loading.svg';
 
 export const SearchBox = ({ onSelect }) => {
   const [search, setSearch] = useState('');
   const [city, setCity] = useState(null);
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['citySearch', search],
@@ -24,13 +26,15 @@ export const SearchBox = ({ onSelect }) => {
       latitude,
       longitude,
     });
-    setSearch('');
+    setSearch(`${name}, ${admin1 ? admin1 : country}`);
+    setIsDisabled(false);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     onSelect(city);
     setCity(null);
+    setSearch('');
   };
 
   return (
@@ -43,17 +47,16 @@ export const SearchBox = ({ onSelect }) => {
             icon={iconSearch}
             placeholder='Search for a place...'
             type='search'
-            value={
-              city
-                ? `${city.name}, ${city.admin1 ? city.admin1 : city.country}`
-                : null
-            }
+            value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
 
           {isLoading && (
             <div className='dropdown__search'>
-              <p className='btn-unit'>Searching...</p>
+              <div style={{ padding: '10px', display: 'flex' }}>
+                <img src={iconLoading} alt='' className='loading' />
+                Search in progress
+              </div>
             </div>
           )}
           {isError && <p>Error: {error.message}</p>}
@@ -71,7 +74,7 @@ export const SearchBox = ({ onSelect }) => {
             </div>
           )}
         </div>
-        <Button type='search' className='btn btn-primary'>
+        <Button disabled={isDisabled} type='search' className='btn btn-primary'>
           Search
         </Button>
       </form>
