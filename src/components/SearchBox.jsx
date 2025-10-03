@@ -40,7 +40,7 @@ export const SearchBox = ({ onSelect }) => {
   };
 
   return (
-    <div className='searchbox'>
+    <section className='searchbox'>
       <h1>How&apos;s the sky looking today?</h1>
       <form onSubmit={handleSubmit}>
         <div className='input'>
@@ -81,6 +81,6 @@ export const SearchBox = ({ onSelect }) => {
           Search
         </Button>
       </form>
-    </div>
+    </section>
   );
 };

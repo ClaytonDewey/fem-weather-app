@@ -6,7 +6,7 @@ export const Loading = () => {
   const today = new Date().toLocaleDateString('en-us', { weekday: 'long' });
   return (
     <>
-      <div>
+      <main>
         <SearchBox />
         <section className='grid results'>
           <div className='col-left'>
@@ -87,7 +87,7 @@ export const Loading = () => {
             </div>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 };
