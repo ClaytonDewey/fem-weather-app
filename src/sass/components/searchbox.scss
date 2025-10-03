@@ -34,7 +34,10 @@
 
       input {
         height: rem(56);
-        transition: background-color 0.3s ease-in-out;
+        @media (prefers-reduced-motion: no-preference) {
+          transition: background-color var(--transition-duration)
+            var(--transition-type);
+        }
         &:hover,
         &:active {
           background-color: var(--neutral-700);

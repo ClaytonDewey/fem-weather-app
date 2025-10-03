@@ -45,7 +45,10 @@
     --ms-overfly-style: none;
     opacity: 0;
     transform: translateY(-5%);
-    transition: transform 150ms ease-in-out, opacity 100ms ease-in-out;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: transform 150ms var(--transition-type),
+        opacity 100ms var(--transition-type);
+    }
     pointer-events: none;
 
     &.content-open {
