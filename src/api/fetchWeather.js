@@ -1,5 +1,5 @@
 export const fetchWeather = async ({ queryKey, signal } = {}) => {
-  const [_key, params] = queryKey || [];
+  const [, params] = queryKey || [];
   if (!params) return null;
 
   const { lat, lon, units } = params;
