@@ -8,7 +8,7 @@ import iconLoading from '../icons/icon-loading.svg';
 
 export const SearchBox = ({ onSelect }) => {
   const [search, setSearch] = useState('');
-  const debouncedSearch = useDebounce(search, 500);
+  const debouncedSearch = useDebounce(search, 300);
   const [city, setCity] = useState(null);
   const [isDisabled, setIsDisabled] = useState(true);
 
@@ -19,8 +19,8 @@ export const SearchBox = ({ onSelect }) => {
     staleTime: 1000 * 60 * 5,
   });
 
-  const handleSelect = (city) => {
-    const { name, admin1, country, latitude, longitude } = city;
+  const handleSelect = (selectedCity) => {
+    const { name, admin1, country, latitude, longitude } = selectedCity;
     setCity({
       name,
       admin1,
