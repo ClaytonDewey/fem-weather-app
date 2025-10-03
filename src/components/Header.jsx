@@ -1,4 +1,4 @@
-import { Button, Dropdown, Unit } from '.';
+import { Button, Dropdown } from '.';
 import iconLogo from '../icons/logo.svg';
 import iconUnits from '../icons/icon-units.svg';
 import iconCheck from '../icons/icon-checkmark.svg';
