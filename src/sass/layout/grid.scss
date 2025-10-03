@@ -21,6 +21,7 @@
       grid-template-columns: rem(800) 1fr;
       grid-template-rows: 1fr;
       gap: var(--sp-32);
+      max-height: rem(693);
     }
 
     &.no-results {
