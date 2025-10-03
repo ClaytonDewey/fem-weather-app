@@ -27,7 +27,7 @@ function App() {
     queryKey: ['weather', { lat, lon, units }],
     queryFn: fetchWeather,
     staleTime: 1000 * 60 * 5,
-    enabled: lat != null && lon !== null,
+    enabled: lat !== null && lon !== null,
   });
 
   const handleSubmit = (e) => {
