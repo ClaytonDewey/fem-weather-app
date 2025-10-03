@@ -68,7 +68,7 @@ export const Loading = () => {
               <div className='card__header'>
                 <h2>Hourly Forecast</h2>
                 <div className='dropdown'>
-                  <button className='btn btn-secondary'>
+                  <button type='button' className='btn btn-secondary'>
                     {today}
                     <img src={iconDropdown} alt='' />
                   </button>

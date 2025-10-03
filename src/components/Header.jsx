@@ -33,6 +33,7 @@ export const Header = ({ onClick, units }) => {
               <section className='unit'>
                 <h3>temperature</h3>
                 <Button
+                  type='button'
                   className={`unit-item ${
                     units === 'metric' ? 'active' : null
                   }`}
@@ -44,6 +45,7 @@ export const Header = ({ onClick, units }) => {
                   {units === 'metric' && <img src={iconCheck} alt='selected' />}
                 </Button>
                 <Button
+                  type='button'
                   className={`unit-item ${
                     units === 'imperial' ? 'active' : null
                   }`}
@@ -60,6 +62,7 @@ export const Header = ({ onClick, units }) => {
               <section className='unit'>
                 <h3>wind speed</h3>
                 <Button
+                  type='button'
                   className={`unit-item ${
                     units === 'metric' ? 'active' : null
                   }`}
@@ -71,6 +74,7 @@ export const Header = ({ onClick, units }) => {
                   {units === 'metric' && <img src={iconCheck} alt='selected' />}
                 </Button>
                 <Button
+                  type='button'
                   className={`unit-item ${
                     units === 'imperial' ? 'active' : null
                   }`}

@@ -15,7 +15,10 @@ export const Error = () => {
         We couldn&rsquo;t connect to the server (API error). Please try again in
         a few moments.
       </p>
-      <Button className='btn btn-secondary' onClick={handleRefresh}>
+      <Button
+        type='button'
+        className='btn btn-secondary'
+        onClick={handleRefresh}>
         <img src={iconRetry} alt='' role='presentation' />
         Retry
       </Button>
