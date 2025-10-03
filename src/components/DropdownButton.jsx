@@ -8,7 +8,7 @@ export const DropdownButton = forwardRef((props, ref) => {
   return (
     <Button
       onClick={toggle}
-      className={`btn btn-secondary ${open ? 'btn-opn' : null}`}
+      className={`btn btn-secondary ${open ? 'btn-open' : null}`}
       ref={ref}>
       {children}
       <img className={open ? 'open' : null} src={iconDropdown} alt='' />
