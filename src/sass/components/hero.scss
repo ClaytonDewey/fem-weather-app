@@ -22,7 +22,7 @@
     font: var(--text-preset-4);
     margin: 0;
     padding: 0;
-    margin-bottom: var(--sp-12);
+    margin-block-end: var(--sp-12);
   }
 
   p {
@@ -45,7 +45,7 @@
     .temp {
       font: var(--text-preset-1);
       letter-spacing: rem(-2);
-      margin-right: var(--sp-24);
+      margin-inline-end: var(--sp-24);
     }
   }
 
@@ -79,7 +79,7 @@
   }
 
   @include breakpoint(large) {
-    // margin-bottom: var(--sp-32);
+    // margin-block-end: var(--sp-32);
   }
 
   &__wrapper {

@@ -33,7 +33,7 @@
     top: rem(66);
 
     img.loading {
-      margin-right: var(--sp-10);
+      margin-inline-end: var(--sp-10);
       animation: spin 3s linear infinite;
       transform-origin: 50% 50%;
     }

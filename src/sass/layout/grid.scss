@@ -8,7 +8,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: var(--sp-16);
-    // margin-bottom: var(--sp-32);
+    // margin-block-end: var(--sp-32);
 
     @include breakpoint(medium) {
       grid-template-columns: repeat(7, 1fr);
