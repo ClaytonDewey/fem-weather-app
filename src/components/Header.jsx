@@ -25,6 +25,7 @@ export const Header = ({ onClick, units }) => {
                   closeDropdown();
                   onClick();
                 }}
+                type='button'
                 className='btn btn-toggle'>
                 Switch to{' '}
                 <span>{units === 'imperial' ? 'metric' : 'imperial'}</span>
