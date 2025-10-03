@@ -77,7 +77,7 @@ export const SearchBox = ({ onSelect }) => {
             </div>
           )}
         </div>
-        <Button disabled={isDisabled} type='search' className='btn btn-primary'>
+        <Button disabled={isDisabled} type='submit' className='btn btn-primary'>
           Search
         </Button>
       </form>
