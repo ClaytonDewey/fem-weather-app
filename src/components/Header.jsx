@@ -91,6 +91,7 @@ export const Header = ({ onClick, units }) => {
               <section className='unit'>
                 <h3>precipitation</h3>
                 <Button
+                  type='button'
                   className={`unit-item ${
                     units === 'metric' ? 'active' : null
                   }`}
@@ -102,6 +103,7 @@ export const Header = ({ onClick, units }) => {
                   {units === 'metric' && <img src={iconCheck} alt='selected' />}
                 </Button>
                 <Button
+                  type='button'
                   className={`unit-item ${
                     units === 'imperial' ? 'active' : null
                   }`}
