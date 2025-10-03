@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { useDebounce } from '@uidotdev/usehooks';
 import { fetchCity } from '../api/fetchCity';
 import { Button, Input } from '.';
 import iconSearch from '../icons/icon-search.svg';
@@ -7,13 +8,14 @@ import iconLoading from '../icons/icon-loading.svg';
 
 export const SearchBox = ({ onSelect }) => {
   const [search, setSearch] = useState('');
+  const debouncedSearch = useDebounce(search, 500);
   const [city, setCity] = useState(null);
   const [isDisabled, setIsDisabled] = useState(true);
 
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ['citySearch', search],
+    queryKey: ['citySearch', debouncedSearch],
     queryFn: fetchCity,
-    enabled: !!search, // only run when search is not empty
+    enabled: !!debouncedSearch, // only run when search is not empty
     staleTime: 1000 * 60 * 5,
   });
 
@@ -66,6 +68,7 @@ export const SearchBox = ({ onSelect }) => {
                 <Button
                   className='btn-unit'
                   key={city.id}
+                  type='button'
                   onClick={() => handleSelect(city)}>
                   {city.name}
                   {city.admin1 ? `, ${city.admin1}` : ''}, {city.country}
