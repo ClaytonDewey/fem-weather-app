@@ -69,7 +69,7 @@
   &__hourly {
     height: rem(693);
     padding: var(--sp-20) var(--sp-16);
-    padding-right: 0;
+    padding-inline-end: 0;
     gap: var(--sp-16);
 
     .icon {
@@ -80,14 +80,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-right: var(--sp-16);
+      padding-inline-end: var(--sp-16);
 
       h2 {
         margin-bottom: 0;
       }
 
-      .btn.btn-secondary {
-        background-color: var(--neutral-600);
+      &:has(.btn-secondary) {
+        .btn-secondary {
+          background-color: var(--neutral-600);
+        }
       }
     }
   }
@@ -96,7 +98,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--sp-16);
-    padding-right: var(--sp-16);
+    padding-inline-end: var(--sp-16);
     overflow-y: auto;
 
     &::-webkit-scrollbar {
