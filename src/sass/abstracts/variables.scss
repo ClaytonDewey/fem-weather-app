@@ -91,12 +91,3 @@
   --transition-duration: var(--transition-duration);
   --transition-type: var(--transition-type);
 }
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
