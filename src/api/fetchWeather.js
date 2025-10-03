@@ -4,7 +4,7 @@ export const fetchWeather = async ({ queryKey, signal } = {}) => {
 
   const { lat, lon, units } = params;
 
-  if (lat == null || lon == null) return null;
+  if (lat === null || lon === null) return null;
 
   const daily = ['temperature_2m_max', 'temperature_2m_min', 'weather_code'];
   const hourly = ['temperature_2m', 'weather_code'];
