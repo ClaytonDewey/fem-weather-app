@@ -35,30 +35,53 @@ function App() {
     fetchWeather(selectedCity.latitude, selectedCity.longitude);
   };
 
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage(
+    'theme',
+    defaultDark ? 'dark' : 'light'
+  );
+
+  const switchTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+  };
+
+  const themeText = theme === 'light' ? 'dark' : 'light';
+
   if (isError) {
     return (
-      <div className='container'>
-        <Header />
-        <Error />
+      <div className='theme-wrapper' data-theme={theme}>
+        <div className='container'>
+          <Header />
+          <Error />
+        </div>
       </div>
     );
   }
 
   return (
-    <div className='container'>
-      <Header onClick={toggleUnits} units={units} />
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <Main
+    <div className='theme-wrapper' data-theme={theme}>
+      <div className='container'>
+        <Header
+          theme={theme}
+          themeText={themeText}
+          switchTheme={switchTheme}
+          onClick={toggleUnits}
           units={units}
-          onSelect={handleCitySelect}
-          onSubmit={handleSubmit}
-          selectedCity={selectedCity}
-          weather={data}
         />
-      )}
-      <Footer />
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <Main
+            units={units}
+            onSelect={handleCitySelect}
+            onSubmit={handleSubmit}
+            selectedCity={selectedCity}
+            weather={data}
+          />
+        )}
+        <Footer />
+      </div>
     </div>
   );
 }

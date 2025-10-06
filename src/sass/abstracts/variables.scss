@@ -19,6 +19,12 @@
   --blue-500: #4658d9;
   --blue-700: #2b1b9c;
 
+  --background: var(--neutral-900);
+  --text: var(--neutral-0);
+  --primary: var(--blue-500);
+  --secondary: var(--blue-700);
+  --accent: var(--neutral-200);
+
   // Typography
   --fs-4xlg: #{rem(96)};
   --fs-3xlg: #{rem(52)};
@@ -92,11 +98,11 @@
   --transition-type: var(--transition-type);
 }
 
-/* 
+[data-theme='dark'] {
+  --background: #d3d2fe;
   --text: #000000;
---background: #d3d2fe;
---primary: #2637ba;
---secondary: #dddbff;
---accent: #7263e3;
-
-*/
+  --primary: #2637ba;
+  --accent: #dddbff;
+  --secondary: #7263e3;
+  --secondary: #7263e3;
+}

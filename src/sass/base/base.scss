@@ -21,8 +21,6 @@ body {
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-  background: var(--neutral-900);
-  color: var(--neutral-0);
   font-family: var(--ff-primary);
 }
 
@@ -40,4 +38,9 @@ img {
   position: absolute;
   white-space: nowrap;
   width: rem(1);
+}
+
+.theme-wrapper {
+  background: var(--background);
+  color: var(--text);
 }

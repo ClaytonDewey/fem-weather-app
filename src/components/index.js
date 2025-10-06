@@ -14,4 +14,5 @@ export { Loading } from './Loading';
 export { Main } from './Main';
 export { Results } from './Results';
 export { SearchBox } from './SearchBox';
+export { Toggler } from './Toggler';
 export { WeatherIcons } from './WeatherIcons';

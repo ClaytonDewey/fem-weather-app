@@ -1,15 +1,16 @@
-import { Button, Dropdown } from '.';
+import { Button, Dropdown, Toggler } from '.';
 import iconLogo from '../icons/logo.svg';
 import iconUnits from '../icons/icon-units.svg';
 import iconCheck from '../icons/icon-checkmark.svg';
 
-export const Header = ({ onClick, units }) => {
+export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
   return (
     <header className='header'>
       <div className='header__logo'>
         <img src={iconLogo} alt='' />
         <span className='sr-only'>Weather Now</span>
       </div>
+      <Toggler theme={theme} themeText={themeText} switchTheme={switchTheme} />
       <div className='header__units'>
         <Dropdown
           buttonText={

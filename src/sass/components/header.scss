@@ -27,3 +27,21 @@
     }
   }
 }
+
+.toggler {
+  input {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  svg {
+    fill: var(--text);
+  }
+
+  label {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

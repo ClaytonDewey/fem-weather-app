@@ -44,10 +44,9 @@
         }
         &:focus {
           color: var(--faded);
-          outline: rem(2) solid var(--neutral-0);
+          outline: rem(2) solid var(--text);
           outline-offset: rem(2);
-          box-shadow: 0 0 0 rem(3) var(--neutral-900),
-            0 0 0 rem(5) var(--neutral-0);
+          box-shadow: 0 0 0 rem(3) var(--background), 0 0 0 rem(5) var(--text);
         }
       }
     }
