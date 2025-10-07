@@ -1,6 +1,5 @@
 import { Button } from '.';
-import iconError from '../icons/icon-error.svg';
-import iconRetry from '../icons/icon-retry.svg';
+import { Icon } from '../svg';
 
 const handleRefresh = () => {
   window.location.reload();
@@ -9,7 +8,7 @@ const handleRefresh = () => {
 export const Error = () => {
   return (
     <div className='error'>
-      <img src={iconError} alt='' className='error__img' />
+      <Icon name='error' />
       <h1>Something went wrong</h1>
       <p>
         We couldn&rsquo;t connect to the server (API error). Please try again in
@@ -19,7 +18,7 @@ export const Error = () => {
         type='button'
         className='btn btn-secondary'
         onClick={handleRefresh}>
-        <img src={iconRetry} alt='' role='presentation' />
+        <Icon name='retry' />
         Retry
       </Button>
     </div>

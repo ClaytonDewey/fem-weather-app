@@ -1,6 +1,5 @@
 import { Card, SearchBox } from '.';
-import iconLoading from '../icons/icon-loading.svg';
-import iconDropdown from '../icons/icon-dropdown.svg';
+import { Icon } from '../svg';
 
 export const Loading = () => {
   const today = new Date().toLocaleDateString('en-us', { weekday: 'long' });
@@ -12,7 +11,7 @@ export const Loading = () => {
           <div className='col-left'>
             <div className='hero__wrapper'>
               <div className='hero loading'>
-                <img src={iconLoading} alt='' />
+                <Icon name='loading' />
                 <p>Loading...</p>
               </div>
               <div className='hero__info'>
@@ -70,7 +69,7 @@ export const Loading = () => {
                 <div className='dropdown'>
                   <button type='button' className='btn btn-secondary'>
                     {today}
-                    <img src={iconDropdown} alt='' />
+                    <Icon name='dropdown' />
                   </button>
                 </div>
               </div>

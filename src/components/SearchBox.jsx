@@ -2,9 +2,8 @@ import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useDebounce } from '@uidotdev/usehooks';
 import { fetchCity } from '../api/fetchCity';
-import { Button, Input } from '.';
-import iconSearch from '../icons/icon-search.svg';
-import iconLoading from '../icons/icon-loading.svg';
+import { Button } from '.';
+import { Icon } from '../svg';
 
 export const SearchBox = ({ onSelect }) => {
   const [search, setSearch] = useState('');
@@ -44,11 +43,11 @@ export const SearchBox = ({ onSelect }) => {
       <h1>How&apos;s the sky looking today?</h1>
       <form onSubmit={handleSubmit}>
         <div className='input'>
-          <Input
-            name='search'
-            icon={iconSearch}
-            placeholder='Search for a place...'
+          <Icon name='search' />
+          <input
             type='search'
+            name='search'
+            placeholder='Search for a place...'
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -56,7 +55,7 @@ export const SearchBox = ({ onSelect }) => {
           {isLoading && (
             <div className='dropdown__search'>
               <div style={{ padding: '10px', display: 'flex' }}>
-                <img src={iconLoading} alt='' className='loading' />
+                <Icon name='loading' />
                 Search in progress
               </div>
             </div>

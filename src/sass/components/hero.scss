@@ -21,6 +21,7 @@
 
   h2 {
     font: var(--text-preset-4);
+    color: var(--neutral-0);
     margin: 0;
     padding: 0;
     margin-block-end: var(--sp-12);
@@ -93,11 +94,15 @@
     justify-content: center;
     gap: rem(14);
     background-image: none;
-    background-color: var(--neutral-800);
-    color: var(--neutral-200);
+    color: var(--text);
+    background-color: var(--background-card);
     font: var(--text-preset-6);
 
-    img {
+    p {
+      color: var(--text);
+    }
+    img,
+    svg {
       height: rem(60);
       animation: spin 3s linear infinite;
       transform-origin: 50% 50%;

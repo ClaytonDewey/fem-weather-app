@@ -7,6 +7,7 @@
   --neutral-800: #262540;
   --neutral-700: #302f4a;
   --neutral-600: #3c3b5e;
+  --neutral-400: #8f8fb7;
   --neutral-300: #acacb7;
   --neutral-200: #d4d3d9;
   --neutral-0: #ffffff;
@@ -20,7 +21,11 @@
   --blue-700: #2b1b9c;
 
   --background: var(--neutral-900);
+  --background-card: var(--neutral-800);
+  --background-button: var(--neutral-700);
+  --border: var(--neutral-600);
   --text: var(--neutral-0);
+  --text-card: var(--neutral-200);
   --primary: var(--blue-500);
   --secondary: var(--blue-700);
   --accent: var(--neutral-200);
@@ -100,7 +105,11 @@
 
 [data-theme='dark'] {
   --background: #d3d2fe;
+  --background-card: var(--neutral-200);
+  --background-button: var(--neutral-300);
+  --border: var(--neutral-600);
   --text: #000000;
+  --text-card: var(--neutral-800);
   --primary: #2637ba;
   --accent: #dddbff;
   --secondary: #7263e3;

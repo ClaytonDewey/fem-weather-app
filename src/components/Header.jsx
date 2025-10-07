@@ -1,13 +1,11 @@
 import { Button, Dropdown, Toggler } from '.';
-import iconLogo from '../icons/logo.svg';
-import iconUnits from '../icons/icon-units.svg';
-import iconCheck from '../icons/icon-checkmark.svg';
+import { Icon } from '../svg';
 
 export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
   return (
     <header className='header'>
       <div className='header__logo'>
-        <img src={iconLogo} alt='' />
+        <Icon name='logo' />
         <span className='sr-only'>Weather Now</span>
       </div>
       <Toggler theme={theme} themeText={themeText} switchTheme={switchTheme} />
@@ -15,7 +13,7 @@ export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
         <Dropdown
           buttonText={
             <>
-              <img src={iconUnits} alt='' />
+              <Icon name='units' />
               Units
             </>
           }
@@ -43,7 +41,7 @@ export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
                     onClick();
                   }}>
                   Celcius(&deg;C)
-                  {units === 'metric' && <img src={iconCheck} alt='selected' />}
+                  {units === 'metric' && <Icon name='check' />}
                 </Button>
                 <Button
                   type='button'
@@ -55,9 +53,7 @@ export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
                     onClick();
                   }}>
                   Fahrenheit(&deg;F)
-                  {units === 'imperial' && (
-                    <img src={iconCheck} alt='selected' />
-                  )}
+                  {units === 'imperial' && <Icon name='check' />}
                 </Button>
               </section>
               <section className='unit'>
@@ -72,7 +68,7 @@ export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
                     onClick();
                   }}>
                   km/h
-                  {units === 'metric' && <img src={iconCheck} alt='selected' />}
+                  {units === 'metric' && <Icon name='check' />}
                 </Button>
                 <Button
                   type='button'
@@ -84,9 +80,7 @@ export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
                     onClick();
                   }}>
                   mph
-                  {units === 'imperial' && (
-                    <img src={iconCheck} alt='selected' />
-                  )}
+                  {units === 'imperial' && <Icon name='check' />}
                 </Button>
               </section>
               <section className='unit'>
@@ -101,7 +95,7 @@ export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
                     onClick();
                   }}>
                   Millimeters(mm)
-                  {units === 'metric' && <img src={iconCheck} alt='selected' />}
+                  {units === 'metric' && <Icon name='check' />}
                 </Button>
                 <Button
                   type='button'
@@ -113,9 +107,7 @@ export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
                     onClick();
                   }}>
                   Inches(in)
-                  {units === 'imperial' && (
-                    <img src={iconCheck} alt='selected' />
-                  )}
+                  {units === 'imperial' && <Icon name='check' />}
                 </Button>
               </section>
             </>
