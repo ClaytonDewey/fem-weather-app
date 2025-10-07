@@ -16,7 +16,7 @@
 
   &-primary {
     background-color: var(--primary);
-    color: var(--text);
+    color: var(--neutral-0);
     font: var(--text-preset-5-md);
     width: 100%;
     height: rem(56);
@@ -51,9 +51,13 @@
     padding-inline: var(--sp-10);
     color: var(--text);
 
-    img {
+    img,
+    svg {
       width: rem(14);
       height: rem(14);
+    }
+    span {
+      text-transform: capitalize;
     }
 
     @include breakpoint(medium) {
@@ -61,7 +65,8 @@
       padding-inline: var(--sp-16);
       height: rem(43);
 
-      img {
+      img,
+      svg {
         width: var(--sp-16);
         height: var(--sp-16);
       }
