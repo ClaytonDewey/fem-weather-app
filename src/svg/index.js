@@ -1,3 +1,11 @@
+export { default as IconCheckmark } from './checkmark';
+export { default as IconChevronDown } from './chevron-down';
+export { default as IconError } from './error';
 export { default as Icon } from './icon';
+export { default as IconLoading } from './loading';
+export { default as IconLogo } from './logo';
 export { default as IconMoon } from './moon';
+export { default as IconRetry } from './retry';
+export { default as IconSearch } from './search';
 export { default as IconSun } from './sun';
+export { default as IconUnits } from './units';
