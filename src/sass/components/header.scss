@@ -22,9 +22,15 @@
 
   @include breakpoint(medium) {
     &__logo {
-      img {
+      img,
+      svg {
         width: rem(197);
       }
+    }
+
+    &__buttons {
+      display: flex;
+      gap: rem(20);
     }
   }
 }
