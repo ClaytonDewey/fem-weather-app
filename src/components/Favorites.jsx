@@ -19,9 +19,9 @@ export const Favorites = ({ favorites, loadFavorite }) => {
         <>
           {favorites.length > 0 ? (
             <>
-              {favorites.map((favorite) => (
+              {favorites.map((favorite, index) => (
                 <Button
-                  key={favorite}
+                  key={index}
                   className='unit-item'
                   onClick={() => {
                     loadFavorite();
