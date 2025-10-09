@@ -2,6 +2,8 @@ import {
   IconCheckmark,
   IconChevronDown,
   IconError,
+  IconHeart,
+  IconHeartFull,
   IconLoading,
   IconLogo,
   IconMoon,
@@ -19,6 +21,10 @@ const Icon = ({ name }) => {
       return <IconChevronDown />;
     case 'error':
       return <IconError />;
+    case 'heart':
+      return <IconHeart />;
+    case 'heart-full':
+      return <IconHeartFull />;
     case 'loading':
       return <IconLoading />;
     case 'logo':

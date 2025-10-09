@@ -1,6 +1,8 @@
 export { default as IconCheckmark } from './checkmark';
 export { default as IconChevronDown } from './chevron-down';
 export { default as IconError } from './error';
+export { default as IconHeart } from './heart';
+export { default as IconHeartFull } from './heart-full';
 export { default as Icon } from './icon';
 export { default as IconLoading } from './loading';
 export { default as IconLogo } from './logo';
