@@ -1,7 +1,15 @@
-import { Button, Dropdown, Toggler } from '.';
+import { Button, Dropdown, Favorites, Toggler } from '.';
 import { Icon } from '../svg';
 
-export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
+export const Header = ({
+  onClick,
+  units,
+  theme,
+  themeText,
+  switchTheme,
+  favorites,
+  loadFavorite,
+}) => {
   return (
     <header className='header'>
       <div className='header__logo'>
@@ -9,6 +17,9 @@ export const Header = ({ onClick, units, theme, themeText, switchTheme }) => {
         <span className='sr-only'>Weather Now</span>
       </div>
       <div className='header__buttons'>
+        <div className='w-auto'>
+          <Favorites favorites={favorites} loadFavorite={loadFavorite} />
+        </div>
         <Toggler
           theme={theme}
           themeText={themeText}

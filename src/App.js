@@ -12,6 +12,7 @@ function App() {
     longitude: -89.40123,
   });
   const [units, setUnits] = useLocalStorage('units', 'imperial');
+  const [favorites, setFavorites] = useLocalStorage('favorites', []);
 
   const handleCitySelect = (city) => {
     setSelectedCity(city);
@@ -46,6 +47,14 @@ function App() {
     setTheme(newTheme);
   };
 
+  const loadFavorite = () => {
+    console.log('Favorited');
+  };
+
+  const addFavorite = () => {
+    setFavorites([...favorites, selectedCity]);
+  };
+
   const themeText = theme === 'light' ? 'dark' : 'light';
 
   if (isError) {
@@ -63,6 +72,8 @@ function App() {
     <div className='theme-wrapper' data-theme={theme}>
       <div className='container'>
         <Header
+          favorites={favorites}
+          loadFavorite={loadFavorite}
           theme={theme}
           themeText={themeText}
           switchTheme={switchTheme}
@@ -73,6 +84,7 @@ function App() {
           <Loading />
         ) : (
           <Main
+            addFavorite={addFavorite}
             units={units}
             onSelect={handleCitySelect}
             onSubmit={handleSubmit}

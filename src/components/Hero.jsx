@@ -1,6 +1,7 @@
-import { Card, WeatherIcons } from '.';
+import { Button, Card, WeatherIcons } from '.';
+import { Icon } from '../svg';
 
-export const Hero = ({ city, weather, units }) => {
+export const Hero = ({ city, weather, units, addFavorite }) => {
   const { name, country, admin1 } = city;
 
   const {
@@ -42,6 +43,18 @@ export const Hero = ({ city, weather, units }) => {
             {country === 'US' || country === 'United States' ? admin1 : country}
           </h2>
           <p>{formatted}</p>
+          <Button
+            className='btn'
+            style={{
+              border: 'none',
+              height: '40px',
+              background: 'transparent',
+              cursor: 'pointer',
+            }}
+            onClick={addFavorite}>
+            <Icon name='heart' />
+            Add to Favorites
+          </Button>
         </div>
         <div className='hero__body'>
           <WeatherIcons code={weather_code} />

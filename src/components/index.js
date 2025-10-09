@@ -4,6 +4,7 @@ export { Dropdown } from './Dropdown';
 export { DropdownButton } from './DropdownButton';
 export { DropdownContent } from './DropdownContent';
 export { Error } from './Error';
+export { Favorites } from './Favorites';
 export { Footer } from './Footer';
 export { ForecastDaily } from './ForecastDaily';
 export { ForecastHourly } from './ForecastHourly';

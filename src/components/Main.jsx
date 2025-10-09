@@ -1,10 +1,22 @@
 import { Results, SearchBox } from '.';
 
-export const Main = ({ onSelect, onSubmit, weather, selectedCity, units }) => {
+export const Main = ({
+  onSelect,
+  onSubmit,
+  weather,
+  selectedCity,
+  units,
+  addFavorite,
+}) => {
   return (
     <main>
       <SearchBox onSelect={onSelect} onSubmit={onSubmit} />
-      <Results units={units} weather={weather} city={selectedCity} />
+      <Results
+        addFavorite={addFavorite}
+        units={units}
+        weather={weather}
+        city={selectedCity}
+      />
     </main>
   );
 };
