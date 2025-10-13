@@ -2,7 +2,7 @@ import { Icon } from '../svg';
 import { Button, Dropdown } from '.';
 
 export const Favorites = ({ favorites, loadFavorite }) => {
-  console.log(favorites);
+  // console.log(favorites);
   return (
     <Dropdown
       buttonText={
@@ -24,7 +24,7 @@ export const Favorites = ({ favorites, loadFavorite }) => {
                   key={index}
                   className='unit-item'
                   onClick={() => {
-                    loadFavorite();
+                    loadFavorite(favorite);
                     closeDropdown();
                   }}>
                   {favorite.name},{' '}

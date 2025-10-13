@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import { ForecastDaily, ForecastHourly, Hero } from '.';
 
-export const Results = ({ weather, city, units, addFavorite }) => {
+export const Results = ({
+  weather,
+  city,
+  units,
+  favorites,
+  handleFavorites,
+}) => {
   const [results, setResults] = useState([1]);
 
   return (
@@ -15,7 +21,8 @@ export const Results = ({ weather, city, units, addFavorite }) => {
         <>
           <div className='col-left'>
             <Hero
-              addFavorite={addFavorite}
+              favorites={favorites}
+              handleFavorites={handleFavorites}
               units={units}
               city={city}
               weather={weather}

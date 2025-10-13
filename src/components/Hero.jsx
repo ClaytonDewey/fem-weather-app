@@ -1,7 +1,7 @@
 import { Button, Card, WeatherIcons } from '.';
 import { Icon } from '../svg';
 
-export const Hero = ({ city, weather, units, addFavorite }) => {
+export const Hero = ({ city, weather, units, favorites, handleFavorites }) => {
   const { name, country, admin1 } = city;
 
   const {
@@ -34,6 +34,10 @@ export const Hero = ({ city, weather, units, addFavorite }) => {
     precipitationLabel = 'mm';
   }
 
+  const isFavorite = favorites.some(
+    (favorite) => favorite.name.toLowerCase() === city.name.toLowerCase()
+  );
+
   return (
     <section className='hero__wrapper'>
       <div className='hero'>
@@ -44,16 +48,25 @@ export const Hero = ({ city, weather, units, addFavorite }) => {
           </h2>
           <p>{formatted}</p>
           <Button
-            className='btn'
+            className='btn btn-secondary'
             style={{
               border: 'none',
               height: '40px',
               background: 'transparent',
               cursor: 'pointer',
             }}
-            onClick={addFavorite}>
-            <Icon name='heart' />
-            Add to Favorites
+            onClick={() => handleFavorites(city)}>
+            {isFavorite ? (
+              <>
+                <Icon name='heart-full' />
+                Remove
+              </>
+            ) : (
+              <>
+                <Icon name='heart' />
+                Add
+              </>
+            )}
           </Button>
         </div>
         <div className='hero__body'>

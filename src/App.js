@@ -47,12 +47,28 @@ function App() {
     setTheme(newTheme);
   };
 
-  const loadFavorite = () => {
-    console.log('Favorited');
+  const loadFavorite = (favorite) => {
+    setSelectedCity(favorite);
+    fetchWeather(favorite.latitude, favorite.longitude);
   };
 
-  const addFavorite = () => {
-    setFavorites([...favorites, selectedCity]);
+  const handleFavorites = (favCity) => {
+    const isFavorite = favorites.some(
+      (favorite) => favorite.name.toLowerCase() === favCity.name.toLowerCase()
+    );
+
+    if (isFavorite) {
+      // Remove city if it's already a favorite
+      setFavorites(
+        favorites.filter(
+          (favorite) =>
+            favorite.name.toLowerCase() !== favCity.name.toLowerCase()
+        )
+      );
+    } else {
+      // Add new city to favorites
+      setFavorites([...favorites, favCity]);
+    }
   };
 
   const themeText = theme === 'light' ? 'dark' : 'light';
@@ -84,7 +100,8 @@ function App() {
           <Loading />
         ) : (
           <Main
-            addFavorite={addFavorite}
+            favorites={favorites}
+            handleFavorites={handleFavorites}
             units={units}
             onSelect={handleCitySelect}
             onSubmit={handleSubmit}

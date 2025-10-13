@@ -6,13 +6,15 @@ export const Main = ({
   weather,
   selectedCity,
   units,
-  addFavorite,
+  favorites,
+  handleFavorites,
 }) => {
   return (
     <main>
       <SearchBox onSelect={onSelect} onSubmit={onSubmit} />
       <Results
-        addFavorite={addFavorite}
+        favorites={favorites}
+        handleFavorites={handleFavorites}
         units={units}
         weather={weather}
         city={selectedCity}
