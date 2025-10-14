@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/fem-weather-app/static/css/main.e9adc571.css",
-    "main.js": "/fem-weather-app/static/js/main.053c3164.js",
+    "main.css": "/fem-weather-app/static/css/main.0b248bad.css",
+    "main.js": "/fem-weather-app/static/js/main.d5f5be5a.js",
     "static/js/453.31d6a180.chunk.js": "/fem-weather-app/static/js/453.31d6a180.chunk.js",
     "static/media/bg-today-large.svg": "/fem-weather-app/static/media/bg-today-large.0ea745fe7292037130ab.svg",
     "static/media/bg-today-small.svg": "/fem-weather-app/static/media/bg-today-small.cd99d8d596b67e82e0ca.svg",
     "index.html": "/fem-weather-app/index.html",
-    "main.e9adc571.css.map": "/fem-weather-app/static/css/main.e9adc571.css.map",
-    "main.053c3164.js.map": "/fem-weather-app/static/js/main.053c3164.js.map",
+    "main.0b248bad.css.map": "/fem-weather-app/static/css/main.0b248bad.css.map",
+    "main.d5f5be5a.js.map": "/fem-weather-app/static/js/main.d5f5be5a.js.map",
     "453.31d6a180.chunk.js.map": "/fem-weather-app/static/js/453.31d6a180.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9adc571.css",
-    "static/js/main.053c3164.js"
+    "static/css/main.0b248bad.css",
+    "static/js/main.d5f5be5a.js"
   ]
 }
