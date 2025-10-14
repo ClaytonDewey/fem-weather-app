@@ -48,17 +48,13 @@ export const Hero = ({ city, weather, units, favorites, handleFavorites }) => {
           </h2>
           <p>{formatted}</p>
           <Button
-            className='btn btn-secondary'
-            style={{
-              border: 'none',
-              height: '40px',
-              background: 'transparent',
-              cursor: 'pointer',
-            }}
+            className='btn btn-favorite'
             onClick={() => handleFavorites(city)}>
             {isFavorite ? (
               <>
-                <Icon name='heart-full' />
+                <span className='full'>
+                  <Icon name='heart-full' />
+                </span>
                 Remove
               </>
             ) : (

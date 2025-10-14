@@ -8,7 +8,9 @@ export const Favorites = ({ favorites, loadFavorite }) => {
       buttonText={
         <>
           {favorites.length > 0 ? (
-            <Icon name='heart-full' />
+            <span className='full'>
+              <Icon name='heart-full' />
+            </span>
           ) : (
             <Icon name='heart' />
           )}

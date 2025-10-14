@@ -40,13 +40,14 @@
         }
         &:hover,
         &:active {
-          background-color: var(--background-button);
+          background-color: var(--neutral-700);
         }
         &:focus {
-          color: var(--text);
-          outline: rem(2) solid var(--text);
+          color: var(--neutral-0);
+          outline: rem(2) solid var(--neutral-0);
           outline-offset: rem(2);
-          box-shadow: 0 0 0 rem(3) var(--background), 0 0 0 rem(5) var(--text);
+          box-shadow: 0 0 0 rem(3) var(--neutral-900),
+            0 0 0 rem(5) var(--neutral-0);
         }
       }
     }
@@ -91,8 +92,8 @@ input[type='search']::-webkit-search-cancel-button {
     padding-inline-start: rem(72);
     height: rem(56);
     width: 100%;
-    background-color: var(--background-card);
-    color: var(--text);
+    background-color: var(--neutral-800);
+    color: var(--neutral-0);
     font: var(--text-preset-5-md);
     border: none;
     border-radius: var(--sp-12);

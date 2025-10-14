@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--background-card);
-  border: 1px solid var(--border);
+  background-color: var(--neutral-800);
+  border: 1px solid var(--neutral-600);
   border-radius: var(--sp-12);
   padding: var(--sp-20);
   height: rem(118);
@@ -22,12 +22,12 @@
   }
 
   .title {
-    color: var(--text-card);
+    color: var(--neutral-200);
   }
 
   .info,
   .day {
-    color: var(--text);
+    color: var(--neutral-0);
   }
 
   .info {
@@ -51,10 +51,10 @@
     width: 100%;
     height: rem(60);
     padding-inline: var(--sp-12);
-    background-color: var(--background-button);
-    border: 1px solid var(--border);
+    background-color: var(--neutral-700);
+    border: 1px solid var(--neutral-600);
     border-radius: var(--sp-8);
-    color: var(--text);
+    color: var(--neutral-0);
     font: var(--text-preset-7);
 
     .time {
@@ -88,7 +88,7 @@
 
       &:has(.btn-secondary) {
         .btn-secondary {
-          background-color: var(--background-button);
+          background-color: var(--neutral-700);
         }
       }
     }
@@ -112,7 +112,7 @@
 
     &::-webkit-scrollbar-thumb {
       border-radius: rem(4);
-      border: 1px solid var(--border);
+      border: 1px solid var(--neutral-600);
       background-color: var(--neutral-700);
       -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
     }

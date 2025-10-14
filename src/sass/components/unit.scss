@@ -8,7 +8,7 @@
   h3 {
     text-transform: capitalize;
     font: var(--text-preset-8);
-    color: var(--text);
+    color: var(--neutral-0);
     margin: 0;
     margin-inline-start: var(--sp-8);
   }
@@ -18,7 +18,7 @@
   }
 
   &:not(:last-child) {
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--neutral-600);
     margin-block-end: var(--sp-10);
     padding-bottom: var(--sp-4);
   }
@@ -30,7 +30,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    color: var(--text);
+    color: var(--neutral-0);
     font: var(--text-preset-7);
     padding-inline: var(--sp-8);
     border: none;
@@ -43,7 +43,7 @@
 
     &.active,
     &:hover {
-      background-color: var(--background-button);
+      background-color: var(--neutral-700);
     }
   }
 }

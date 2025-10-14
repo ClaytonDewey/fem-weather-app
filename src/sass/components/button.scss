@@ -9,25 +9,54 @@
   margin: 0;
   border: none;
   background-color: transparent;
-  color: var(--text);
+  color: var(--neutral-0);
+
+  img,
+  svg {
+    width: rem(14);
+    height: rem(14);
+  }
+
+  span.full {
+    svg {
+      fill: red;
+    }
+  }
+  @include breakpoint(medium) {
+    img,
+    svg {
+      width: var(--sp-16);
+      height: var(--sp-16);
+    }
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     transition: all var(--transition-duration) var(--transition-type);
   }
 
-  &-primary {
-    background-color: var(--primary);
+  &-favorite {
+    background-color: var(--neutral-800);
     color: var(--neutral-0);
+    padding-inline: var(--sp-12);
+    height: rem(39);
+    border-radius: var(--sp-12);
+    margin-top: var(--sp-20);
+  }
+
+  &-primary {
+    background-color: var(--blue-500);
+    color: var(--neutral-text);
     font: var(--text-preset-5-md);
     width: 100%;
     height: rem(56);
     border-radius: var(--sp-12);
 
     &:hover {
-      background-color: var(--secondary);
+      background-color: var(--blue-700);
     }
 
     &:focus {
-      outline: rem(2) solid var(--primary);
+      outline: rem(2) solid var(--blue-500);
       outline-offset: rem(2);
     }
 
@@ -38,24 +67,18 @@
 
     &:disabled {
       cursor: not-allowed;
-      background-color: var(--primary);
+      background-color: var(--blue-500);
       opacity: 0.6;
     }
   }
 
   &-secondary {
     height: rem(33);
-    background-color: var(--background-card);
+    background-color: var(--neutral-800);
     font: var(--text-preset-8);
     border-radius: var(--sp-6);
     padding-inline: var(--sp-10);
-    color: var(--text);
-
-    img,
-    svg {
-      width: rem(14);
-      height: rem(14);
-    }
+    color: var(--neutral-0);
     span {
       text-transform: capitalize;
     }
@@ -64,12 +87,6 @@
       gap: var(--sp-10);
       padding-inline: var(--sp-16);
       height: rem(43);
-
-      img,
-      svg {
-        width: var(--sp-16);
-        height: var(--sp-16);
-      }
     }
   }
 
@@ -88,11 +105,11 @@
     }
 
     &:hover {
-      background-color: var(--background-button);
+      background-color: var(--neutral-700);
     }
 
     &:focus {
-      background-color: var(--background-button);
+      background-color: var(--neutral-700);
       outline: 1px solid var(--text);
       outline-offset: 1px;
       box-shadow: 0 0 0 rem(2) var(--neutral-800), 0 0 0 rem(3) var(--text);
@@ -118,7 +135,7 @@
 
     &.active,
     &:hover {
-      background-color: var(--background-button);
+      background-color: var(--neutral-700);
     }
   }
 
@@ -129,7 +146,7 @@
 
     .btn {
       height: rem(33);
-      background-color: var(--neutral-800);
+      background-color: var(--neutral-700);
       font: var(--text-preset-8);
       border-radius: var(--sp-6);
       padding-inline: var(--sp-10);
@@ -137,11 +154,11 @@
       width: 100%;
 
       &.active {
-        background-color: var(--background-button);
+        background-color: var(--neutral-600);
       }
 
       &:hover {
-        background-color: var(--background-button);
+        background-color: var(--neutral-600);
       }
 
       @include breakpoint(medium) {

@@ -7,11 +7,12 @@
   --neutral-800: #262540;
   --neutral-700: #302f4a;
   --neutral-600: #3c3b5e;
-  --neutral-400: #8f8fb7;
+  --neutral-400: #848497;
   --neutral-300: #acacb7;
   --neutral-200: #d4d3d9;
   --neutral-0: #ffffff;
   --faded: rgba(172, 172, 183, 0.6);
+  --neutral-text: #ffffff;
 
   // Orange
   --orange-500: #ff820a;
@@ -20,15 +21,6 @@
   --blue-500: #4658d9;
   --blue-700: #2b1b9c;
 
-  --background: var(--neutral-900);
-  --background-card: var(--neutral-800);
-  --background-button: var(--neutral-700);
-  --border: var(--neutral-600);
-  --text: var(--neutral-0);
-  --text-card: var(--neutral-200);
-  --primary: var(--blue-500);
-  --secondary: var(--blue-700);
-  --accent: var(--neutral-200);
   --attribution: var(--orange-500);
 
   // Typography
@@ -105,16 +97,15 @@
 }
 
 [data-theme='dark'] {
-  --background: #d3d2fe;
-  --background-card: var(--neutral-200);
-  --background-button: var(--neutral-300);
-  --border: var(--neutral-600);
-  --text: #000000;
-  --text-card: var(--neutral-800);
-  --primary: #2637ba;
-  --secondary: #7263e3;
-  --accent: #dddbff;
-  --attribution: var(--primary);
+  --neutral-900: #dcf4fd;
+  --neutral-800: #cbdae0;
+  --neutral-700: #c2d1d7;
+  --neutral-600: #b3c7cd;
+  --neutral-300: #686e70;
+  --neutral-200: #4c4f51;
+  --neutral-0: #000000;
+
+  --attribution: var(--blue-500);
 }
 /* 
 

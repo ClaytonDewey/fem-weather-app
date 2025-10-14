@@ -12,7 +12,7 @@
   background-position: top center;
   height: rem(286);
   padding: var(--sp-40) 0;
-  color: var(--neutral-0);
+  color: var(--neutral-text);
 
   &__header {
     width: 100%;
@@ -21,14 +21,14 @@
 
   h2 {
     font: var(--text-preset-4);
-    color: var(--neutral-0);
+    color: var(--neutral-text);
     margin: 0;
     padding: 0;
     margin-block-end: var(--sp-12);
   }
 
   p {
-    color: var(--neutral-200);
+    color: var(--neutral-900);
     font: var(--text-preset-6);
   }
 
@@ -94,12 +94,12 @@
     justify-content: center;
     gap: rem(14);
     background-image: none;
-    color: var(--text);
-    background-color: var(--background-card);
+    color: var(--neutral-text);
+    background-color: var(--neutral-800);
     font: var(--text-preset-6);
 
     p {
-      color: var(--text);
+      color: var(--neutral-text);
     }
     img,
     svg {
