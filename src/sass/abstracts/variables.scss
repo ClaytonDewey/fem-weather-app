@@ -13,6 +13,7 @@
   --neutral-0: #ffffff;
   --faded: rgba(172, 172, 183, 0.6);
   --neutral-text: #ffffff;
+  --neutral-text-sub: var(--neutral-200);
 
   // Orange
   --orange-500: #ff820a;
@@ -96,7 +97,7 @@
   --transition-type: var(--transition-type);
 }
 
-[data-theme='dark'] {
+[data-theme='light'] {
   --neutral-900: #dcf4fd;
   --neutral-800: #cbdae0;
   --neutral-700: #c2d1d7;
